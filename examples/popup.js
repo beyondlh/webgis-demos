@@ -11,7 +11,10 @@ var map = new ol.Map({
     })
 });
 
-var popup = new ol.Overlay.Popup();
+var popup = new ol.Overlay.Popup({
+    offset:[15,100],
+    title:"测试"
+});
 map.addOverlay(popup);
 
 map.on('singleclick', function (evt) {
