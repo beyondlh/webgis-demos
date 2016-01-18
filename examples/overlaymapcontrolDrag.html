@@ -5,9 +5,11 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.5.0/ol.css" type="text/css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.5.0/ol.js"></script>
-    <link rel="stylesheet" href="overviewmap-custom-drag.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.5.0/ol.css" type="text/css">-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.5.0/ol.js"></script>-->
+    <link rel="stylesheet" href="../examples/ol.css" type="text/css">
+    <script src="../lib/ol.js"></script>
+    <!--<link rel="stylesheet" href="overviewmap-custom-drag.css">-->
     <style>
         .ol-custom-overviewmap,
         .ol-custom-overviewmap.ol-uncollapsible {
@@ -102,7 +104,7 @@
         var left = map.getCoordinateFromPixel(bottomLeft);
         var top = map.getCoordinateFromPixel(topRight);
         var extent = [left[0], left[1], top[0], top[1]];
-        map.getView().fitExtent(extent, map.getSize());
+        map.getView().fit(extent, map.getSize());
         map.getView().setResolution(c);
     };
 
