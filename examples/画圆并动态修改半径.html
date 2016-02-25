@@ -5,6 +5,7 @@
     <title>Draw Features</title>
     <link rel="stylesheet" href="http://openlayers.org/en/v3.14.0/css/ol.css" type="text/css">
     <script src="http://openlayers.org/en/v3.14.0/build/ol.js"></script>
+    <script src="../lib/jquery-1.8.0.min.js"></script>
     <style>
         #vienna {
             text-decoration: none;
@@ -29,9 +30,9 @@
         <option value="None">None</option>
     </select>
 </form>
-<div id="vienna"
-     style="position: absolute;cursor: hand; margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
-    <img src="http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png"
+<div id="vienna" draggable="true"
+     style="margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
+    <img id="myimage" src="http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png"
          style="left: 0px; top: 0px; position: absolute;">
     <label class=" BMapLabel" unselectable="on" tid="nbHandleLabel"
            style="position: absolute; display: inline;
@@ -51,6 +52,9 @@
 
 <div id="marker" title="Marker"></div>
 <script>
+    var ismousedown = false;
+    var ismousemove = false;
+    var firstPosition = null;
     var raster = new ol.layer.Tile({
         source: new ol.source.OSM()
     });
@@ -119,15 +123,40 @@
             draw.on("drawend", function (event) {
                 vector.getSource().clear();
 //                this.map.getOverlays().clear();
-                var pos    = event.feature.getGeometry().getLastCoordinate();
+                var pos = event.feature.getGeometry().getLastCoordinate();
+                console.log(pos);
                 var marker = new ol.Overlay({
                     position   : pos,
                     positioning: 'center-center',
                     element    : document.getElementById('vienna'),
-                    offset     : [-16,-10]
+                    offset     : [0, 0]
+//                    stopEvent  : false
                 });
+
                 map.addOverlay(marker);
                 map.removeInteraction(draw);
+
+                $(document).on('mouseup', function (evt) {
+                    ismousedown = false;
+                });
+                $("#vienna").on("mouseup", function () {
+                    ismousedown = false;
+                    console.log("鼠标释放");
+                });
+
+                $("#vienna").on("mousedown", function (event) {
+                    ismousedown = true;
+                    firstPosition = event.clientY;
+                });
+
+                $("#vienna").on("mousemove", function (event) {
+                    if (ismousedown) {
+                        var point = map.getCoordinateFromPixel([event.clientX, firstPosition]);
+                        console.log(point);
+                        marker.setPosition(ol.proj.transform(point, 'EPSG:3857', 'EPSG:3857'));
+//                        marker.setPosition(point);
+                    }
+                });
             });
             map.addInteraction(draw);
         }
