@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ArcGIS REST with 512x512 Tiles</title>
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.13.0/css/ol.css" type="text/css">
+    <script src="http://openlayers.org/en/v3.13.0/build/ol.js"></script>
+</head>
+<body>
+<div id="map" class="map"></div>
+<script>
+    var attribution = new ol.Attribution({
+        html: 'Copyright:&copy; 2013 ESRI, i-cubed, GeoEye'
+    });
+
+    var projection = ol.proj.get('EPSG:4326');
+
+    // The tile size supported by the ArcGIS tile service.
+    var tileSize = 256;
+    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap2015qs/MapServer";
+
+    var tmpExtent_ = ol.extent.createEmpty();
+    var tileGrid = new ol.tilegrid.TileGrid({
+        origin     : [-400, 400],
+        extent     : [59.01797971556523, 1.694325360347264, 154.99881037726752, 56.86146079919307],
+        resolutions: [
+            0.0624062618086491,
+            0.04394531353227711,
+            0.021972656766138556,
+            0.010986328383069278,
+            0.005493164191534639,
+            0.0027465809060368165,
+            0.0013732916427489112,
+            6.866458213744556E-4,
+            3.433229106872278E-4,
+            1.716614553436139E-4,
+            8.582953794130404E-5,
+            4.291595870115493E-5,
+            2.1457979350577466E-5,
+            1.0728989675288733E-5,
+            5.363305107141452E-6,
+            2.681652553570726E-6
+        ]
+    });
+
+    //    console.info(getTileCoordExtent(
+    //            [0, 32, 24], tmpExtent_));
+    //    console.info(getTileCoordExtent2(
+    //            [0, 32, 23], tmpExtent_));
+    var tileArcGISRest = new ol.source.TileArcGISRest({
+        tileGrid: tileGrid,
+        url     : tileUrl
+    });
+    var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
+    var tileArcGISXYZRest = new ol.source.XYZ({
+        tileGrid       : tileGrid,
+        projection     : projection,
+        tileUrlFunction: function (tileCoord) {
+            console.info(tileCoord);
+            var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
+                    .replace('{x}', tileCoord[1].toString())
+                    .replace('{y}', (-tileCoord[2] - 1).toString());
+            return url;
+        }
+    });
+
+    var map = new ol.Map({
+        target: 'map',
+        layers: [
+            new ol.layer.Tile({
+                source: tileArcGISXYZRest
+            })
+        ],
+        view  : new ol.View({
+            center    : [109.15169990462329, 31.74108365827285],
+            zoom      : 4,
+            projection: projection,
+            extent    : [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
+        })
+    });
+    
+    function getTileCoordExtent(tileCoord, opt_extent) {
+        var origin     = [-400, -400];
+        var resolution = 0.0624062618086491;
+        var tileSize   = [256, 256];
+        var minX       = origin[0] + tileCoord[1] * tileSize[0] * resolution;
+        var minY       = origin[1] + tileCoord[2] * tileSize[1] * resolution;
+        var maxX       = minX + tileSize[0] * resolution;
+        var maxY       = minY + tileSize[1] * resolution;
+        return [minX, minY, maxX, maxY];
+    }
+    function getTileCoordExtent2(tileCoord, opt_extent) {
+        var origin     = [-400, -400];
+        var resolution = 0.0624062618086491;
+        var tileSize   = [256, 256];
+        var dScale     = resolution * 256;
+
+        var minX = tileCoord[1] * tileSize[0] * resolution + origin[0];
+        var minY = Math.abs((tileCoord[2] + 1) * tileSize[1] * resolution + origin[1]);
+
+        var maxX = minX + tileSize[0] * resolution;
+        var maxY = minY + tileSize[1] * resolution;
+        return [minX, minY, maxX, maxY];
+    }
+</script>
+</body>
+</html>
