@@ -129,7 +129,7 @@
             });
             draw.on("drawend", function (event) {
 //                debugger;
-                document.getElementById('vienna').style.setProperty("display","block");
+                document.getElementById('vienna').style.setProperty("display", "block");
                 vector.getSource().clear();
 //                this.map.getOverlays().clear();
                 circle        = event.feature;
@@ -155,19 +155,27 @@
                         var point = map.getCoordinateFromPixel([event.clientX, event.clientY]);
                         marker.setPosition(point);
 //                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
-                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
+//                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
                     }
                 });
 
 
                 $("#vienna").on("mouseup", function (event) {
                     ismousedown = false;
-                    console.log("鼠标释放");
                 });
 
                 $("#vienna").on("mousedown", function (event) {
                     ismousedown   = true;
                     firstPosition = event.screenY;
+                });
+
+                $("#vienna").on('mousemove', function (event) {
+                    if (ismousedown) {
+                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY]);
+                        marker.setPosition(point);
+//                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
+//                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
+                    }
                 });
             });
             map.addInteraction(draw);
