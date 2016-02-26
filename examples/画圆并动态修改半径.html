@@ -32,7 +32,7 @@
     </select>
 </form>
 <div id="vienna" draggable="true"
-     style="margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
+     style="display: none; margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
     <img id="myimage" src="http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png"
          style="left: 0px; top: 0px; position: absolute;">
     <label class=" BMapLabel" unselectable="on" tid="nbHandleLabel"
@@ -128,7 +128,8 @@
                 maxPoints       : maxPoints
             });
             draw.on("drawend", function (event) {
-
+//                debugger;
+                document.getElementById('vienna').style.setProperty("display","block");
                 vector.getSource().clear();
 //                this.map.getOverlays().clear();
                 circle        = event.feature;
@@ -144,27 +145,29 @@
                 map.addOverlay(marker);
                 map.removeInteraction(draw);
 
-                $(document).on('mouseup', function (evt) {
+                $(document).on('mouseup', function (event) {
                     ismousedown = false;
                 });
-                $("#vienna").on("mouseup", function () {
+
+                $(document).on('mousemove', function (event) {
+                    if (ismousedown) {
+//                        debugger;
+                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY]);
+                        marker.setPosition(point);
+//                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
+                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
+                    }
+                });
+
+
+                $("#vienna").on("mouseup", function (event) {
                     ismousedown = false;
                     console.log("鼠标释放");
                 });
 
                 $("#vienna").on("mousedown", function (event) {
                     ismousedown   = true;
-                    firstPosition = event.clientY;
-                });
-
-                $("#vienna").on("mousemove", function (event) {
-                    if (ismousedown) {
-//                        debugger;
-                        var point = map.getCoordinateFromPixel([event.clientX, firstPosition]);
-                        marker.setPosition(point);
-//                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
-                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
-                    }
+                    firstPosition = event.screenY;
                 });
             });
             map.addInteraction(draw);
