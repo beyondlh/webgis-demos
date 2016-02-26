@@ -151,8 +151,7 @@
 
                 $(document).on('mousemove', function (event) {
                     if (ismousedown) {
-//                        debugger;
-                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY]);
+                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY-10]);
                         marker.setPosition(point);
 //                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
 //                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
@@ -171,7 +170,8 @@
 
                 $("#vienna").on('mousemove', function (event) {
                     if (ismousedown) {
-                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY]);
+                        debugger;
+                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY-10]);
                         marker.setPosition(point);
 //                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
 //                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
