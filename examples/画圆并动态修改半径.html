@@ -31,10 +31,9 @@
         <option value="None">None</option>
     </select>
 </form>
-<div id="vienna" draggable="true"
-     style="display: none; margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
+<div id="vienna" style="display: none; margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
     <img id="myimage" src="http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png"
-         style="left: 0px; top: 0px; position: absolute;">
+         style="left: 0px; top: 0px;">
     <label class=" BMapLabel" unselectable="on" tid="nbHandleLabel"
            style="position: absolute; display: inline;
            cursor: inherit; border: none; padding: 0px;
@@ -57,7 +56,7 @@
     var sphare = new ol.Sphere(6378137);
     var ismousedown = false;
     var ismousemove = false;
-    var firstPosition = null;
+    var firstclientY = null;
     var circle = null;
 
 
@@ -134,9 +133,9 @@
 //                this.map.getOverlays().clear();
                 circle        = event.feature;
                 orignalRadius = circle.getGeometry().getRadius();
-                var pos       = event.feature.getGeometry().getLastCoordinate();
+                var markerPos = event.feature.getGeometry().getLastCoordinate();
                 var marker    = new ol.Overlay({
-                    position   : pos,
+                    position   : markerPos,
                     positioning: 'center-center',
                     element    : document.getElementById('vienna'),
                     offset     : [0, 0]
@@ -147,35 +146,29 @@
 
                 $(document).on('mouseup', function (event) {
                     ismousedown = false;
-                });
-
-                $(document).on('mousemove', function (event) {
-                    if (ismousedown) {
-                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY-10]);
-                        marker.setPosition(point);
-//                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
-//                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
-                    }
+                    $(document).off("mousemove");
+                    $("#vienna").off('mousemove');
                 });
 
 
                 $("#vienna").on("mouseup", function (event) {
                     ismousedown = false;
+                    $("#vienna").off('mousemove');
                 });
 
                 $("#vienna").on("mousedown", function (event) {
-                    ismousedown   = true;
-                    firstPosition = event.screenY;
-                });
-
-                $("#vienna").on('mousemove', function (event) {
-                    if (ismousedown) {
-                        debugger;
-                        var point = map.getCoordinateFromPixel([event.clientX, event.clientY-10]);
-                        marker.setPosition(point);
-//                        var radious = sphare.haversineDistance(circle.getGeometry().getFirstCoordinate(), point);
-//                        circle.getGeometry().setRadius(circle.getGeometry().getRadius() + event.offsetX);
-                    }
+                    var pos     = map.getPixelFromCoordinate(marker.getPosition());
+                    ismousedown = true;
+                    map.on('pointermove', function (evt) {
+                        console.log("鼠标移动");
+                        if (ismousedown) {
+                            console.log("鼠标拖动");
+                            circle.getGeometry().setRadius(circle.getGeometry().getRadius() + evt.originalEvent.movementX);
+//                            var point = map.getCoordinateFromPixel([evt.pixel[0], pos[1]]);
+                            marker.setPosition(circle.getGeometry().getLastCoordinate());
+//                            circle.getGeometry().setRadius(circle.getGeometry().getRadius() + evt.originalEvent.movementX);
+                        }
+                    });
                 });
             });
             map.addInteraction(draw);
