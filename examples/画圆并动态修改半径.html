@@ -53,8 +53,6 @@
 
     var sphare = new ol.Sphere(6378137);
     var ismousedown = false;
-    var ismousemove = false;
-    var firstclientY = null;
     var circle = null;
 
 
@@ -129,6 +127,7 @@
                 vector.getSource().clear();
 //                this.map.getOverlays().clear();
                 circle        = event.feature.getGeometry();
+                console.log(circle.getCenter(),circle.getRadius());
                 orignalRadius = circle.getRadius();
                 var markerPos = event.feature.getGeometry().getLastCoordinate();
                 var marker    = new ol.Overlay({
