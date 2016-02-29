@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Draw Features</title>
     <link rel="stylesheet" href="http://openlayers.org/en/v3.14.0/css/ol.css" type="text/css">
-    <!--<script src="http://openlayers.org/en/v3.14.0/build/ol.js"></script>-->
-    <script src="../lib/ol-debug.js"></script>
+    <script src="http://openlayers.org/en/v3.14.0/build/ol.js"></script>
     <script src="../lib/jquery-1.8.0.min.js"></script>
     <style>
         #vienna {
@@ -158,9 +157,15 @@
 
                 $("#vienna").on("mousedown", function (event) {
                     ismousedown = true;
+                    event.preventDefault();
                     map.on('pointermove', function (mapmoveevt) {
                         if (ismousedown) {
-                            mapmoveevt.preventDefault();
+                            if (mapmoveevt.preventDefault) {
+                                mapmoveevt.preventDefault();
+                            } else {
+                                console.log("不支持preventDefault");
+                                mapmoveevt.returnValue = false;
+                            }
                             var radius = Math.sqrt(getRadiusSquared_(mapmoveevt));
                             circle.setRadius(radius);
                             var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
