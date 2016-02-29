@@ -5,7 +5,7 @@
     <title>Draw Features</title>
     <link rel="stylesheet" href="http://openlayers.org/en/v3.14.0/css/ol.css" type="text/css">
     <!--<script src="http://openlayers.org/en/v3.14.0/build/ol.js"></script>-->
-    <script src="http://openlayers.org/en/v3.14.0/build/ol-debug.js"></script>
+    <script src="../lib/ol-debug.js"></script>
     <script src="../lib/jquery-1.8.0.min.js"></script>
     <style>
         #vienna {
@@ -131,8 +131,8 @@
                 document.getElementById('vienna').style.setProperty("display", "block");
                 vector.getSource().clear();
 //                this.map.getOverlays().clear();
-                circle        = event.feature;
-                orignalRadius = circle.getGeometry().getRadius();
+                circle        = event.feature.getGeometry();
+                orignalRadius = circle.getRadius();
                 var markerPos = event.feature.getGeometry().getLastCoordinate();
                 var marker    = new ol.Overlay({
                     position   : markerPos,
@@ -157,21 +157,25 @@
                 });
 
                 $("#vienna").on("mousedown", function (event) {
-                    var pos     = map.getPixelFromCoordinate(marker.getPosition());
                     ismousedown = true;
-                    map.on('pointermove', function (evt) {
-                        console.log("鼠标移动");
+                    map.on('pointermove', function (mapevt) {
                         if (ismousedown) {
-                            console.log("鼠标拖动");
-                            circle.getGeometry().setRadius(circle.getGeometry().getRadius() + evt.originalEvent.movementX);
-//                            var point = map.getCoordinateFromPixel([evt.pixel[0], pos[1]]);
-                            marker.setPosition(circle.getGeometry().getLastCoordinate());
-//                            circle.getGeometry().setRadius(circle.getGeometry().getRadius() + evt.originalEvent.movementX);
+                            var radius = Math.sqrt(getRadiusSquared_(event, mapevt));
+                            console.log("修改前半径", circle.getRadius());
+                            console.log("半径", radius);
+                            circle.setRadius(radius);
+                            marker.setPosition(circle.getLastCoordinate());
                         }
                     });
                 });
             });
             map.addInteraction(draw);
+
+            getRadiusSquared_ = function (evt, mapevt) {
+                var center        = circle.getCenter();
+                var lastcoordinat = mapevt.coordinate;
+                return Math.pow(lastcoordinat[0] - center[0], 2) + Math.pow(lastcoordinat[1] - center[1], 2);
+            };
         }
     }
 
