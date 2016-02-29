@@ -20,7 +20,6 @@
 <body>
 <div id="map" class="map"></div>
 <form class="form-inline">
-    <label>Geometry type &nbsp;</label>
     <select id="type">
         <option value="Point">Point</option>
         <option value="LineString">LineString</option>
@@ -34,7 +33,7 @@
 <div id="vienna" style="display: none; margin: 0px; padding: 0px; width: 31px; height: 19px; overflow: hidden;">
     <img id="myimage" src="http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png"
          style="left: 0px; top: 0px;">
-    <label class=" BMapLabel" unselectable="on" tid="nbHandleLabel"
+    <label unselectable="on" id="nbHandleLabel"
            style="position: absolute; display: inline;
            cursor: inherit; border: none; padding: 0px;
            white-space: nowrap; font-style: normal;
@@ -127,7 +126,6 @@
                 maxPoints       : maxPoints
             });
             draw.on("drawend", function (event) {
-//                debugger;
                 document.getElementById('vienna').style.setProperty("display", "block");
                 vector.getSource().clear();
 //                this.map.getOverlays().clear();
@@ -142,6 +140,8 @@
                 });
 
                 map.addOverlay(marker);
+                var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
+                $("#nbHandleLabel").html(length + "m");
                 map.removeInteraction(draw);
 
                 $(document).on('mouseup', function (event) {
@@ -158,12 +158,13 @@
 
                 $("#vienna").on("mousedown", function (event) {
                     ismousedown = true;
-                    map.on('pointermove', function (mapevt) {
+                    map.on('pointermove', function (mapmoveevt) {
                         if (ismousedown) {
-                            var radius = Math.sqrt(getRadiusSquared_(event, mapevt));
-                            console.log("修改前半径", circle.getRadius());
-                            console.log("半径", radius);
+                            mapmoveevt.preventDefault();
+                            var radius = Math.sqrt(getRadiusSquared_(mapmoveevt));
                             circle.setRadius(radius);
+                            var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
+                            $("#nbHandleLabel").html(length + "m");
                             marker.setPosition(circle.getLastCoordinate());
                         }
                     });
@@ -171,9 +172,9 @@
             });
             map.addInteraction(draw);
 
-            getRadiusSquared_ = function (evt, mapevt) {
+            getRadiusSquared_ = function (mapmoveevt) {
                 var center        = circle.getCenter();
-                var lastcoordinat = mapevt.coordinate;
+                var lastcoordinat = mapmoveevt.coordinate;
                 return Math.pow(lastcoordinat[0] - center[0], 2) + Math.pow(lastcoordinat[1] - center[1], 2);
             };
         }
