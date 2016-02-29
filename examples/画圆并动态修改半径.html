@@ -53,6 +53,7 @@
 
     var sphare = new ol.Sphere(6378137);
     var ismousedown = false;
+    var ismousemove = false;
     var circle = null;
 
 
@@ -125,7 +126,6 @@
             draw.on("drawend", function (event) {
                 document.getElementById('vienna').style.setProperty("display", "block");
                 vector.getSource().clear();
-//                this.map.getOverlays().clear();
                 circle        = event.feature.getGeometry();
                 console.log(circle.getCenter(),circle.getRadius());
                 orignalRadius = circle.getRadius();
