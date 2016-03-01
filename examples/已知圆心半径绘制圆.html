@@ -167,7 +167,7 @@
                                 mapmoveevt.returnValue = false;
                             }
                             var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
-                            if (length > 5000) {
+                            if (length - 5000 > 0) {
                                 return;
                             }
                             var radius = Math.sqrt(getRadiusSquared_(mapmoveevt));
@@ -184,7 +184,11 @@
             function getRadiusSquared_(mapmoveevt) {
                 var center        = circle.getCenter();
                 var lastcoordinat = mapmoveevt.coordinate;
-                return Math.pow(lastcoordinat[0] - center[0], 2) + Math.pow(lastcoordinat[1] - center[1], 2);
+                var radius        = Math.pow(lastcoordinat[0] - center[0], 2) + Math.pow(lastcoordinat[1] - center[1], 2);
+                if (radius - 0.0027894347136572695 > 0.0) {
+                    radius = 0.0027894347136572695;
+                }
+                return radius;
             }
 
             function transformRadius(center, meterRadius) {
