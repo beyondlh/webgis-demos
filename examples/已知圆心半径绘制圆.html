@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ArcGIS REST with 256x256 Tiles</title>
+    <title>已知圆心半径绘制圆</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="../lib/ol.css" type="text/css">
     <!--<script src="../lib/ol.js"></script>-->
     <script src="../lib/ol-debug.js"></script>
@@ -34,17 +35,18 @@
               text-align: center; zoom: 1;
                width: 56px; -webkit-user-select: none;
                left: 30px; top: 0px;
-               background: url(http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png) -31px 0px;">1148m</label>
+               background: url(http://webmap0.map.bdstatic.com/wolfman/static/common/images/nbsearch_366e590.png) -31px 0px;"></label>
 </div>
 
 <div id="marker" title="Marker"></div>
 <script>
     var projection = ol.proj.get('EPSG:4326');
     var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/SXGXPTMAPdyone/MapServer";
+    // WGS84 ellipsoid
     var sphare = new ol.Sphere(6378137);
     var ismousedown = false;
     var ismousemove = false;
-    var circle = null,marker;
+    var circle = null, marker, map;
     $.ajax({
         url     : tileUrl + "?f=pjson",
         dataType: "json",
@@ -96,7 +98,7 @@
                 source: source
             });
 
-            var map = new ol.Map({
+            map = new ol.Map({
                 target: 'map',
                 layers: [
                     new ol.layer.Tile({
@@ -114,7 +116,8 @@
 
 
             function addCircle(center, radius) {
-                circle = new ol.geom.Circle(center, radius);
+                radius  = transformRadius(center, radius);
+                circle  = new ol.geom.Circle(center, radius);
                 var fea = new ol.Feature({
                     geometry: circle
                 });
@@ -122,9 +125,13 @@
                 source.addFeature(fea);
                 fea.setStyle(style);
 
+                var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
+                length     = Math.floor(length);
+                $("#nbHandleLabel").html(length + "m");
+
 
                 var markerPos = circle.getLastCoordinate();
-                marker    = new ol.Overlay({
+                marker        = new ol.Overlay({
                     position   : markerPos,
                     positioning: 'center-center',
                     element    : document.getElementById('vienna'),
@@ -133,10 +140,10 @@
                 map.addOverlay(marker);
                 document.getElementById('vienna').style.setProperty("display", "block");
 
-                changeRadus();
+                editCircle();
             }
 
-            function changeRadus(){
+            function editCircle() {
                 $(document).on('mouseup', function (event) {
                     ismousedown = false;
                     $(document).off("mousemove");
@@ -157,12 +164,12 @@
                             if (mapmoveevt.preventDefault) {
                                 mapmoveevt.preventDefault();
                             } else {
-                                console.log("不支持preventDefault");
                                 mapmoveevt.returnValue = false;
                             }
                             var radius = Math.sqrt(getRadiusSquared_(mapmoveevt));
                             circle.setRadius(radius);
                             var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
+                            length     = Math.floor(length);
                             $("#nbHandleLabel").html(length + "m");
                             marker.setPosition(circle.getLastCoordinate());
                         }
@@ -170,13 +177,20 @@
                 });
             }
 
-            getRadiusSquared_ = function (mapmoveevt) {
+            function getRadiusSquared_(mapmoveevt) {
                 var center        = circle.getCenter();
                 var lastcoordinat = mapmoveevt.coordinate;
                 return Math.pow(lastcoordinat[0] - center[0], 2) + Math.pow(lastcoordinat[1] - center[1], 2);
-            };
+            }
 
-            addCircle([109.15169990462329, 31.74108365827285], 0.91796875);
+            function transformRadius(center, meterRadius) {
+                var lastcoord = sphare.offset(center, meterRadius, (270 / 360) * 2 * Math.PI);
+                var dx        = center[0] - lastcoord[0];
+                var dy        = center[1] - lastcoord[1];
+                return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
+            }
+
+            addCircle([119.15169990462329, 31.74108365827285], 500);
         },
         error   : function (err) {
             console.error(err);
