@@ -108,7 +108,7 @@
                 ],
                 view  : new ol.View({
                     center    : [109.15169990462329, 31.74108365827285],
-                    zoom      : 4,
+                    zoom      : 8,
                     projection: projection,
                     extent    : [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
                 })
@@ -126,7 +126,7 @@
                 fea.setStyle(style);
 
                 var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
-                length     = Math.floor(length);
+                length     = Math.floor(length) + 1;
                 $("#nbHandleLabel").html(length + "m");
 
 
@@ -166,10 +166,14 @@
                             } else {
                                 mapmoveevt.returnValue = false;
                             }
+                            var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
+                            if (length > 5000) {
+                                return;
+                            }
                             var radius = Math.sqrt(getRadiusSquared_(mapmoveevt));
                             circle.setRadius(radius);
-                            var length = sphare.haversineDistance(circle.getCenter(), circle.getLastCoordinate());
-                            length     = Math.floor(length);
+                            length = Math.floor(length) + 1;
+
                             $("#nbHandleLabel").html(length + "m");
                             marker.setPosition(circle.getLastCoordinate());
                         }
@@ -190,7 +194,7 @@
                 return Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
             }
 
-            addCircle([119.15169990462329, 31.74108365827285], 500);
+            addCircle([109.15169990462329, 31.74108365827285], 5000);
         },
         error   : function (err) {
             console.error(err);
