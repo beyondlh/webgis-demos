@@ -1,74 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!--http://www.codesc.net源码素材网-->
     <title>可点击展开与收缩的左侧纵向二级导航菜单</title>
     <meta charset="utf-8">
     <style>
-        html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, img, ins, kbd, q, samp, strike, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-            font-size: 100%;
-            margin: 0;
-            outline: 0 none;
-            padding: 0;
-            border: 0 none;
-        }
 
-        body, input, select {
-            font-family: \5B8B\4F53, Arial Narrow, arial, serif;
-            background: #FFFFFF;
-            color: #000;
-            font-size: 12px;
-            line-height: 20px;
-            text-align: left;
-        }
-
-        table {
+        .tjskl-main table {
             border-collapse: collapse;
         }
 
-        ul, li {
+        .tjskl-main ul, li {
             list-style: none;
         }
 
-        /*clear*/
-        .cb, .cb_10, .cb_15 {
-            clear: both;
-            width: 100%;
-            height: 0;
-            overflow: hidden;
-        }
 
-        .cl {
-            clear: left
-        }
-
-        .cr {
-            clear: right
-        }
-
-        .cb_10 {
-            height: 10px;
-        }
-
-        .cb_15 {
-            height: 15px;
-        }
-
-        /*float*/
-        .fl {
-            float: left;
-            display: inline;
-        }
-
-        .pt_10 {
-            padding-top: 10px
-        }
-
-        a {
+        .tjskl-main a {
             color: #03c;
             text-decoration: none;
         }
 
-        a:hover {
+        .tjskl-main a:hover {
             color: #f60;
             text-decoration: none;
         }
@@ -100,7 +53,7 @@
             display: none;
         }
 
-        .bsb {
+        .tjskl-main .bsb {
             border-bottom: 1px solid #c8d2e5;
             border-top: 0;
         }
@@ -215,25 +168,25 @@
                     document.getElementById(name + '_tab' + i).className           = '';
                 }
             }
-        }
+        };
         mouse_flash.submenu = function (box, div) {
             var div_classname = document.getElementById(div).getElementsByTagName('a')[0];
             if (div_classname.className == 'show') {
                 with (document.getElementById(box).style) {
-                    height = 'auto';
+                    height  = 'auto';
                     display = 'block';
                 }
                 div_classname.className = 'less';
                 div_classname.innerHTML = '收缩';
             } else {
                 with (document.getElementById(box).style) {
-                    height = '0';
+                    height  = '0';
                     display = 'none';
                 }
                 div_classname.className = 'show';
                 div_classname.innerHTML = '展开';
             }
-        }
+        };
         var num_arr = [0, 1, 2, 3];
         mouse_flash.focus_tab = function (num, event, name) {
             if (num < 0) {
@@ -248,7 +201,7 @@
                     document.getElementById(name + i).style.display = '';
                 }
             }
-        }
+        };
         var num_arr2 = [0, 1];
         mouse_flash.focus_tab2 = function (num, event, name) {
             if (num < 0) {
@@ -270,15 +223,15 @@
 <div class="tjskl-main pt_10">
     <div class="tjskl-sidebar fl">
         <ul class="tj_submain" style="border-bottom:0;">
-            <li class="title">商品目录</li>
+            <!--<li class="title">商品目录</li>-->
             <li id="#" onMouseOut="do_list_row_unshow(this);" onMouseOver="do_list_row_show(this);">
-                <a title="" href="http://www.codesc.net">安全锁具</a>
+                <a title="">安全锁具</a>
             <span>
-                                            <a title="" href="#">锌合金制&nbsp;<img src="new_icon.gif" border="0" width="16"
+                                            <a title="" href="#">锌合金制&nbsp;<img src="http://webmap2.map.bdstatic.com/wolfman/static/common/images/new/newlogo_bb40ad7.png" border="0" width="16"
                                                                                 height="5"/></a>
                                             <a title="" href="#">无缝钢管</a>
                                             <a title="" href="#">不锈钢制</a>
-                                            <a title="" href="#">非金属品&nbsp;<img src="new_icon.gif" border="0" width="16"
+                                            <a title="" href="#">非金属品&nbsp;<img src="http://webmap2.map.bdstatic.com/wolfman/static/common/images/new/newlogo_bb40ad7.png" border="0" width="16"
                                                                                 height="5"/></a>
                                         </span>
             </li>
