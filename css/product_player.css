@@ -262,28 +262,10 @@
     text-align: center
 }
 
-.colspan2 .fleft .wxyt_ft .view select {
-    margin-left: 8px;
-    color: #333;
-    vertical-align: middle;
-    margin-top: -1px
-}
-
 .colspan2 .fleft .radar {
     overflow: hidden;
     zoom: 1
 }
-
-.colspan2 .fleft .radar #wxyt_loading {
-    height: 100%;
-    bottom: 96px
-}
-
-.colspan2 .fleft .radar #wxyt_loading div {
-    margin-top: 276px
-}
-
-
 
 .colspan2 .fleft .radar .wxyt_ft {
     height: 80px;
@@ -291,101 +273,6 @@
     top: -2px;
     z-index: 2;
     padding-top: 11px
-}
-
-.colspan2 .fleft .module-hotcity .meta {
-    padding: 12px 0
-}
-
-.colspan2 .fleft .module-hotcity dd {
-    float: left;
-    width: 116px;
-    height: 26px;
-    line-height: 26px;
-    overflow: hidden;
-    padding-left: 26px;
-    font-size: 14px
-}
-
-.colspan2 .fleft .module-hotcity dd a {
-    color: #666
-}
-
-.colspan2 .fleft .module-hotcity dd a:hover {
-    color: #f60
-}
-
-.colspan2 .fleft .module-world {
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    padding-bottom: 20px;
-    background-color: white
-}
-
-.colspan2 .fleft .module-world .btitle {
-    background-color: white
-}
-
-.colspan2 .fleft .module-world .map_tab {
-    margin-top: 12px
-}
-
-.colspan2 .fleft .module-world .map_cnt {
-    width: 645px;
-    background-color: #f7fafd;
-    padding: 8px;
-    margin: 0 auto
-}
-
-.colspan2 .fright {
-    width: 280px;
-    float: right;
-    background-color: white;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px
-}
-
-.colspan2 .fright a {
-    color: #666
-}
-
-.colspan2 .fright a:hover {
-    color: #f60
-}
-
-.colspan2 .fright .btitle {
-    padding-top: 12px;
-    height: 24px;
-    line-height: 24px
-}
-
-.colspan2 .fright .btitle .more {
-    right: 20px;
-    top: 14px
-}
-
-.colspan2 .fright .news-cnt {
-    padding: 10px 20px 12px;
-    border-bottom: 1px solid #ddf1f8
-}
-
-.colspan2 .fright .news-cnt .newsli {
-    line-height: 24px;
-    text-align: left
-}
-
-.colspan2 .fright .news-cnt .newsli li {
-    padding-left: 12px;
-    background-position: -550px 10px;
-    margin-bottom: 2px
-}
-
-.colspan2 .fright .news-cnt .newsli a {
-    display: block;
-    height: 24px;
-    overflow: hidden
 }
 
 #wxyt_speed {
