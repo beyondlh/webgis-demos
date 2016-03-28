@@ -10,7 +10,7 @@
 <div id="map" class="map"></div>
 <script>
     var projection = ol.proj.get('EPSG:4326');
-    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/SXGXPTMAPdyone/MapServer";
+    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap_2015ncyw/MapServer";
 
     $.ajax({
         url     : tileUrl + "?f=pjson",
@@ -46,15 +46,24 @@
                 layers: [
                     new ol.layer.Tile({
                         source: tileArcGISXYZ
+                    }),
+                    new ol.layer.Image({
+                        source: new ol.source.ImageStatic({
+                            url        : 'http://localhost:63343/ol3-demos/img/6.png',
+                            projection : projection,
+                            imageExtent: [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
+                        })
                     })
+
                 ],
                 view  : new ol.View({
                     center    : [109.15169990462329, 31.74108365827285],
                     zoom      : 4,
                     projection: projection,
-                    extent    : [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
+                    extent    : [4.96, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
                 })
             });
+
         },
         error   : function (err) {
             console.error(err);
