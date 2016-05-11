@@ -1,50 +1,106 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>使用SVG加载marker</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="ol3.7.0/ol.css">
-    <script type="text/javascript" src="../lib/ol-debug.js" charset="utf-8"></script>
+    <meta charset="UTF-8">
+    <title>SVGMarker</title>
+    <link rel="stylesheet" href="../lib/ol.css" type="text/css">
+    <script src="../lib/ol.js"></script>
+    <script src="../lib/jquery-1.8.0.min.js"></script>
+
 </head>
-
 <body>
-<div id="map" style="width:100%;"></div>
+<div id="map"></div>
+</body>
+</html>
 <script>
+    var projection = ol.proj.get('EPSG:4326');
+    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/SXGXPTMAPdyone/MapServer";
 
-    // 创建地图
-    new ol.Map({
-        layers: [
-            new ol.layer.Tile({
-                source: new ol.source.XYZ({
-                    wrapX: false,
-                    tileUrlFunction: tileUrlFunction
+    $.ajax({
+        url: tileUrl + "?f=pjson",
+        dataType: "json",
+        success: function (data) {
+            var resolutions = [];
+            var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
+            var len = data.tileInfo.lods.length;
+            var fullExtent = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
+            for (var i = 0; i < len; i++) {
+                resolutions.push(data.tileInfo.lods[i].resolution);
+            }
+            var tileGrid = new ol.tilegrid.TileGrid({
+                tileSize: data.tileInfo.cols,
+                origin: origin,
+                extent: fullExtent,
+                resolutions: resolutions
+            });
+            var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
+            var tileArcGISXYZ = new ol.source.XYZ({
+                tileGrid: tileGrid,
+                projection: projection,
+                tileUrlFunction: function (tileCoord) {
+                    var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
+                            .replace('{x}', tileCoord[1].toString())
+                            .replace('{y}', (-tileCoord[2] - 1).toString());
+                    return url;
+                }
+            });
+
+            var map = new ol.Map({
+                target: 'map',
+                layers: [
+                    new ol.layer.Tile({
+                        source: tileArcGISXYZ
+                    })
+                ],
+                view: new ol.View({
+                    center: [109.15169990462329, 31.74108365827285],
+                    zoom: 4,
+                    projection: projection,
+                    extent: [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
                 })
-            })
-        ],
-        view: new ol.View({
-            center: [0, 0],
-            zoom: 2
-        }),
-        target: "map"
-    });
+            });
+            var coordinate = [109.15169990462329, 31.74108365827285];
 
-    // Bing在线地图的url构造函数
-    function tileUrlFunction(coord, params1, params2) {
-        return getVETileUrl(coord[0], coord[1], -coord[2] - 1);
-    }
 
-    function getVETileUrl(z, x, y) {
-        for(var a="",c=x,d=y,e=0;e<z;e++) {
-            a=((c&1)+2*(d&1)).toString()+a;
-            c>>=1;
-            d>>=1
+            // 构建svg的Image对象
+
+            // 构建svg的Image对象
+/*            var svg = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">'+
+                    '<path fill="#156BB1" d="M22.906,10.438c0,4.367-6.281,14.312-7.906,17.031c-1.719-2.75-7.906-12.665-7.906-17.031S10.634,2.531,15,2.531S22.906,6.071,22.906,10.438z"/>'+
+                    '<circle fill="#FFFFFF" cx="15" cy="10.677" r="3.291"/></svg>';*/
+
+            var svg = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300px" height="100px"> <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />' +
+                    ' <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1"> ' +
+                    '<animate attributeName="cx" from="0" to="100" dur="5s" repeatCount="indefinite" />' +
+                    '</circle>' +
+                    '</svg>';
+
+            var mysvg = new Image();
+            mysvg.src = 'data:image/svg+xml,' + escape(svg);
+
+            var svgFeature = new ol.Feature({
+                geometry: new ol.geom.Point(coordinate)
+            });
+            var style = new ol.style.Style({
+                image: new ol.style.Icon({
+                    img: mysvg,    // 设置Image对象
+                    imgSize: [300, 600]    // 及图标大小
+                })
+            });
+
+            svgFeature.setStyle(style);
+
+            var vectorSource = new ol.source.Vector({
+                features: [svgFeature]
+            });
+            var vectorLayer = new ol.layer.Vector({
+                source: vectorSource
+            });
+
+            map.addLayer(vectorLayer);
+        },
+        error: function (err) {
+            console.error(err);
         }
-        return 'http://dynamic.t0.tiles.ditu.live.com/comp/ch/' + a + '?it=G,VE,BX,L,LA&mkt=zh-cn,syr&n=z&og=111&ur=CN'
-    }
-
-    var feature = new ol.Feature({
-
     });
 </script>
-</body>
-
-</html>

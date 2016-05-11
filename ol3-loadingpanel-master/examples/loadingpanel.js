@@ -11,4 +11,7 @@ var map = new ol.Map({
     })
 });
 
-map.addControl(new ol.control.LoadingPanel());
+map.addControl(new ol.control.LoadingPanel({
+    progressMode: "layer"
+}));
+// map.addControl(new ol.control.Loading());

@@ -10,16 +10,16 @@
 <div id="map" style="width:100%;"></div>
 <script>
 
-    var tian_di_tu_road_layer = new ol.layer.Tile({
+/*    var tian_di_tu_road_layer = new ol.layer.Tile({
         title: "天地图路网",
         source: new ol.source.XYZ({
             url: "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}"
         })
-    });
+    });*/
 
     // 创建地图
     var map = new ol.Map({
-        layers: [tian_di_tu_road_layer],
+//        layers: [tian_di_tu_road_layer],
         view  : new ol.View({
             center: [0, 0],
             zoom  : 2
@@ -35,14 +35,13 @@
     });
     map.addLayer(tian_di_tu_annotation);
 
-/*
     var tian_di_tu_satellite_layer = new ol.layer.Tile({
         title: "天地图卫星影像",
         source: new ol.source.XYZ({
             url: 'http://t3.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}'
         })
     });
-    map.addLayer(tian_di_tu_satellite_layer);*/
+    map.addLayer(tian_di_tu_satellite_layer);
 
 </script>
 </body>

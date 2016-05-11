@@ -42,6 +42,7 @@
             });
 
             var map = new ol.Map({
+                controls: [new ol.control.ScaleLine()],
                 target: 'map',
                 layers: [
                     new ol.layer.Tile({

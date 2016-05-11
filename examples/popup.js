@@ -5,19 +5,38 @@ var map = new ol.Map({
             source: new ol.source.OSM()
         })
     ],
-    view  : new ol.View({
+    controls: [new ol.control.ScaleLine()],
+    view: new ol.View({
         center: ol.proj.transform([-0.92, 52.96], 'EPSG:4326', 'EPSG:3857'),
-        zoom  : 6
+        zoom: 6
     })
 });
 
 var popup = new ol.Overlay.Popup({
-    offset:[15,100],
-    title:"测试"
+    // offset: [-60, -350],
+    title: "测试",
+    showMark: true,
+    height: "320px",
+    width:"500px"
 });
+
+
+/*
+ var popup = new ol.Overlay({
+ element:document.getElementById("overlay")
+ });
+ */
+
+
 map.addOverlay(popup);
 
 map.on('singleclick', function (evt) {
     var prettyCoord = ol.coordinate.toStringHDMS(ol.proj.transform(evt.coordinate, 'EPSG:3857', 'EPSG:4326'), 2);
-    popup.show(evt.coordinate, '<div><h2>Coordinates</h2><p>' + prettyCoord + '</p></div>');
+    /*    popup.show(map.getCoordinateFromPixel(evt.pixel), '<div>' +
+     'DDDDD<h2>Coordinates</h2><p>' + prettyCoord + '</p></div>');*/
+    popup.show(map.getCoordinateFromPixel(evt.pixel), '<div><p>这是一个非常伟大的时刻</p><p>这是一个非常伟大的时刻</p><p>这是一个非常伟大的时刻</p><p>这是一个非常伟大的时刻</p></div>');
 });
+
+/*map.on('singleclick', function (evt) {
+ popup.setPosition(map.getCoordinateFromPixel(evt.pixel));
+ });*/
