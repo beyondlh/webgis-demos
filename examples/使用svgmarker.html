@@ -9,12 +9,18 @@
 
 </head>
 <body>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M595 -11q-35 -36 -58 -46.5t-47.5 -0.5t-60.5 47q-37 40 -83.5 90.5t-67.5 73.5t-49 57t-38.5 55t-22 53t-15 64.5t-3.5 78.5q0 100 48.5 185.5t132 135.5t181.5 50t181.5 -50t132 -135.5t48.5 -185.5q0 -35 -1.5 -60.5t-8.5 -53t-11.5 -44t-22 -44t-28.5 -43.5t-42 -51
+t-52 -57t-67 -71q-30 -31 -46 -48z"/>
+</svg>
 <div id="map"></div>
 </body>
 </html>
+<!--
 <script>
     var projection = ol.proj.get('EPSG:4326');
-    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/SXGXPTMAPdyone/MapServer";
+    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap2015qs/MapServer";
 
     $.ajax({
         url: tileUrl + "?f=pjson",
@@ -53,38 +59,39 @@
                     })
                 ],
                 view: new ol.View({
-                    center: [109.15169990462329, 31.74108365827285],
-                    zoom: 4,
+                    center: [116.15169990462329, 27.74108365827285],
+                    zoom: 8,
                     projection: projection,
                     extent: [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
                 })
             });
-            var coordinate = [109.15169990462329, 31.74108365827285];
+            var coordinate = [116.15169990462329, 27.74108365827285];
 
 
             // 构建svg的Image对象
 
-            // 构建svg的Image对象
-/*            var svg = '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 30 30" enable-background="new 0 0 30 30" xml:space="preserve">'+
-                    '<path fill="#156BB1" d="M22.906,10.438c0,4.367-6.281,14.312-7.906,17.031c-1.719-2.75-7.906-12.665-7.906-17.031S10.634,2.531,15,2.531S22.906,6.071,22.906,10.438z"/>'+
-                    '<circle fill="#FFFFFF" cx="15" cy="10.677" r="3.291"/></svg>';*/
-
-            var svg = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300px" height="100px"> <rect x="0" y="0" width="300" height="100" stroke="black" stroke-width="1" />' +
-                    ' <circle cx="0" cy="50" r="15" fill="blue" stroke="black" stroke-width="1"> ' +
-                    '<animate attributeName="cx" from="0" to="100" dur="5s" repeatCount="indefinite" />' +
+/*
+            var svg = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' +
+                    'width="20px" height="20px"> ' +
+                    ' <circle cx="10" cy="10" r="10" fill="red" stroke="red" stroke-width="1"> ' +
+                    '<animate attributeName="r" from="0" to="10" dur="1s" repeatCount="indefinite" />' +
                     '</circle>' +
+                    '</svg>';*/
+            var svg = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" ' +
+                    '<path d="M595 -11q-35 -36 -58 -46.5t-47.5 -0.5t-60.5 47q-37 40 -83.5 90.5t-67.5 73.5t-49 57t-38.5 55t-22 53t-15 64.5t-3.5 78.5q0 100 48.5 185.5t132 135.5t181.5 50t181.5 -50t132 -135.5t48.5 -185.5q0 -35 -1.5 -60.5t-8.5 -53t-11.5 -44t-22 -44t-28.5 -43.5t-42 -51 t-52 -57t-67 -71q-30 -31 -46 -48z" ' +
+                    'style="stroke:#48660c; fill:#47661b;"/>' +
                     '</svg>';
 
-            var mysvg = new Image();
-            mysvg.src = 'data:image/svg+xml,' + escape(svg);
+            var mySvg = new Image();
+            mySvg.src = 'data:image/svg+xml,' + decodeURI(svg);
 
             var svgFeature = new ol.Feature({
                 geometry: new ol.geom.Point(coordinate)
             });
             var style = new ol.style.Style({
                 image: new ol.style.Icon({
-                    img: mysvg,    // 设置Image对象
-                    imgSize: [300, 600]    // 及图标大小
+                    img: mySvg,    // 设置Image对象
+                    imgSize: [20, 20]    // 及图标大小
                 })
             });
 
@@ -98,9 +105,13 @@
             });
 
             map.addLayer(vectorLayer);
+
+/*            setInterval(function () {
+                map.renderSync();
+            }, 100);*/
         },
         error: function (err) {
             console.error(err);
         }
     });
-</script>
+</script>-->
