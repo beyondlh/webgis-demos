@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>演示在ol3中加载天地图WMTS</title>
+    <title>天地图WMTS</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../lib/ol.css">
     <script type="text/javascript" src="../lib/ol-debug.js" charset="utf-8"></script>
@@ -41,11 +41,12 @@
     var map = new ol.Map({
         layers: [tian_di_tu_road_layer],
         view: new ol.View({
-            center: [121.00228, 29.14696],
-            zoom: 14
+            center: [12273952.253920462, 3947819.636872783],
+            zoom: 6
         }),
         target: "map"
     });
+    window.hdmap = map;
     /*
      var tian_di_tu_annotation = new ol.layer.Tile({
      title: "天地图文字标注",
@@ -63,7 +64,6 @@
      })
      });
      map.addLayer(tian_di_tu_satellite_layer);*/
-
 </script>
 </body>
 
