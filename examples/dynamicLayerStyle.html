@@ -18,59 +18,51 @@
         dataType: "json",
         success: function (data) {
             var resolutions = [];
-            var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
-            var len = data.tileInfo.lods.length;
-            var fullExtent = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
-            for (var i = 0; i < len; i++) {
-                resolutions.push(data.tileInfo.lods[i].resolution);
-            }
-            var tileGrid = new ol.tilegrid.TileGrid({
-                tileSize: data.tileInfo.cols,
-                origin: origin,
-                extent: fullExtent,
-                resolutions: resolutions
-            });
-            var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
-            tileArcGISXYZ = new ol.source.XYZ({
-                tileGrid: tileGrid,
-                projection: projection,
-                tileUrlFunction: function (tileCoord) {
-                    var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
-                            .replace('{x}', tileCoord[1].toString())
-                            .replace('{y}', (-tileCoord[2] - 1).toString());
-                    return url;
-                }
-            });
+             var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
+             var len = data.tileInfo.lods.length;
+             var fullExtent = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
+             for (var i = 0; i < len; i++) {
+             resolutions.push(data.tileInfo.lods[i].resolution);
+             }
+             var tileGrid = new ol.tilegrid.TileGrid({
+             tileSize: data.tileInfo.cols,
+             origin: origin,
+             extent: fullExtent,
+             resolutions: resolutions
+             });
+             var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
+             tileArcGISXYZ = new ol.source.XYZ({
+             tileGrid: tileGrid,
+             projection: projection,
+             tileUrlFunction: function (tileCoord) {
+             var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
+             .replace('{x}', tileCoord[1].toString())
+             .replace('{y}', (-tileCoord[2] - 1).toString());
+             return url;
+             }
+             });
 
             var map = new ol.Map({
                 controls: [new ol.control.ScaleLine()],
                 target: 'map',
-//                layers: [
-//                    new ol.layer.Tile({
-//                        source: tileArcGISXYZ
-//                    }),
-//                    new ol.layer.Image({
-//                        source: new ol.source.ImageStatic({
-//                            url: 'http://localhost:63343/ol3-demos/img/6.png',
-//                            projection: projection,
-//                            imageExtent: [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
-//                        })
-//                    })
-//
-//                ],
+                layers: [
+                    new ol.layer.Tile({
+                        source: tileArcGISXYZ
+                    })
+                ],
                 view: new ol.View({
-                    center    : [109.15169990462329, 31.74108365827285],
-                    zoom      : 4,
+                    center: [109.15169990462329, 31.74108365827285],
+                    zoom: 6,
                     projection: projection,
-                    extent    : [4.96, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
+                    extent: [113.57502833300009, 24.50095333300004, 118.47531500000002, 30.072808364000025]
                 })
             });
 
             var params = {
                 layers: 'show:0',
-                transparent:false,
+                transparent: false,
                 layerDefs: '0:1=1',
-                dynamicLayers: '[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"simple","symbol":{"type":"esriSFS","style":"esriSFSSolid","color":[255,255,0,255],"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[255,255,0,255],"width":10}}}}}]'
+                dynamicLayers: '[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"simple","symbol":{"type":"esriSFS","style":"esriSLSSolid ","color":[255,30,0,30],"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[30,0,0,30],"width":2}}}}}]'
             };
 
             var source = new ol.source.TileArcGISRest({
