@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>动态请求不同Style的arcgis 动态图层</title>
     <link rel="stylesheet" href="../lib/ol.css" type="text/css">
     <script src="../lib/ol.js"></script>
@@ -11,45 +12,45 @@
 <script>
     var projection = ol.proj.get('EPSG:4326');
     var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap_2015ncyw/MapServer";
-    var dynamticLayerUrl = "http://171.34.40.68:6080/arcgis/rest/services/jiangxi/GL_GPSROAD";
+    var dynamticLayerUrl = "http://127.0.0.1:6080/arcgis/rest/services/GPSROADEVENTS";
     var tileArcGISXYZ;
     $.ajax({
         url: tileUrl + "?f=pjson",
         dataType: "json",
         success: function (data) {
-            var resolutions = [];
-             var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
-             var len = data.tileInfo.lods.length;
-             var fullExtent = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
-             for (var i = 0; i < len; i++) {
-             resolutions.push(data.tileInfo.lods[i].resolution);
-             }
-             var tileGrid = new ol.tilegrid.TileGrid({
-             tileSize: data.tileInfo.cols,
-             origin: origin,
-             extent: fullExtent,
-             resolutions: resolutions
-             });
-             var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
-             tileArcGISXYZ = new ol.source.XYZ({
-             tileGrid: tileGrid,
-             projection: projection,
-             tileUrlFunction: function (tileCoord) {
-             var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
-             .replace('{x}', tileCoord[1].toString())
-             .replace('{y}', (-tileCoord[2] - 1).toString());
-             return url;
-             }
-             });
+//            var resolutions = [];
+//            var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
+//            var len = data.tileInfo.lods.length;
+//            var fullExtent = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
+//            for (var i = 0; i < len; i++) {
+//                resolutions.push(data.tileInfo.lods[i].resolution);
+//            }
+//            var tileGrid = new ol.tilegrid.TileGrid({
+//                tileSize: data.tileInfo.cols,
+//                origin: origin,
+//                extent: fullExtent,
+//                resolutions: resolutions
+//            });
+//            var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
+//            tileArcGISXYZ = new ol.source.XYZ({
+//                tileGrid: tileGrid,
+//                projection: projection,
+//                tileUrlFunction: function (tileCoord) {
+//                    var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
+//                            .replace('{x}', tileCoord[1].toString())
+//                            .replace('{y}', (-tileCoord[2] - 1).toString());
+//                    return url;
+//                }
+//            });
 
             var map = new ol.Map({
                 controls: [new ol.control.ScaleLine()],
                 target: 'map',
-                layers: [
-                    new ol.layer.Tile({
-                        source: tileArcGISXYZ
-                    })
-                ],
+//                layers: [
+//                    new ol.layer.Tile({
+//                        source: tileArcGISXYZ
+//                    })
+//                ],
                 view: new ol.View({
                     center: [109.15169990462329, 31.74108365827285],
                     zoom: 6,
@@ -57,12 +58,16 @@
                     extent: [113.57502833300009, 24.50095333300004, 118.47531500000002, 30.072808364000025]
                 })
             });
+            /*注意dynamicLyaers的写法*/
 
             var params = {
                 layers: 'show:0',
+                FORMAT:"png",
+                f:"image",
+                format:"png",
                 transparent: false,
-                layerDefs: '0:1=1',
-                dynamicLayers: '[{"id":0,"source":{"type":"mapLayer","mapLayerId":0},"drawingInfo":{"renderer":{"type":"simple","symbol":{"type":"esriSFS","style":"esriSLSSolid ","color":[255,30,0,30],"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[30,0,0,30],"width":2}}}}}]'
+//                layerDefs: '0:1=1',
+                dynamicLayers: '[{"id":1,"source":{"type":"dataLayer","dataSource":{"type":"table","dataSourceName":"GISROAD_EVENTS","workspaceId":"MyFileGDBWorkspaceID"}},"drawingInfo":{"renderer": {"type":"simple", "symbol": {"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":2,"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":1}}}}}]'
             };
 
             var source = new ol.source.TileArcGISRest({
