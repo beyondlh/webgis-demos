@@ -58,16 +58,18 @@
                     extent: [113.57502833300009, 24.50095333300004, 118.47531500000002, 30.072808364000025]
                 })
             });
-            /*注意dynamicLyaers的写法*/
+            /*注意dynamicLyaers的写法
+            第一个是简单渲染，第二个是唯一值渲染。
+            * */
 
             var params = {
                 layers: 'show:0',
-                FORMAT:"png",
-                f:"image",
-                format:"png",
+                FORMAT: "png",
+                f: "image",
+                format: "png",
                 transparent: false,
-//                layerDefs: '0:1=1',
-                dynamicLayers: '[{"id":1,"source":{"type":"dataLayer","dataSource":{"type":"table","dataSourceName":"GISROAD_EVENTS","workspaceId":"MyFileGDBWorkspaceID"}},"drawingInfo":{"renderer": {"type":"simple", "symbol": {"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":2,"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":1}}}}}]'
+//                dynamicLayers: '[{"id":1,"source":{"type":"dataLayer","dataSource":{"type":"table","dataSourceName":"GISROAD_EVENTS","workspaceId":"MyFileGDBWorkspaceID"}},"drawingInfo":{"renderer": {"type":"simple", "symbol": {"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":2,"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":1}}}}}]'
+                dynamicLayers: '[{"id":1,"source":{"type":"dataLayer","dataSource":{"type":"table","dataSourceName":"GISROAD_EVENTS","workspaceId":"MyFileGDBWorkspaceID"}},"drawingInfo":{"renderer": {"type": "uniqueValue","field1": "LDXZDM","defaultSymbol": {"color": [0, 0, 0, 64],"outline": {"color": [0, 0, 0, 255],"width": 1,"type": "esriSLS","style": "esriSLSNull"},"type": "esriSFS","style": "esriSFSNull"},"uniqueValueInfos": [{"value": "1","symbol": {"type": "esriSLS","style": "esriSLSSolid","width":2,"color": [255, 0, 0, 128],"outline": {"color": [0, 0, 0, 255],"width": 1,"type": "esriSLS","style": "esriSLSSolid"},}}, {"value": "6","symbol": {"type": "esriSLS","style": "esriSLSSolid","width":2,"color": [0, 255, 0, 128],"outline": {"color": [0, 0, 0, 255],"width": 1,"type": "esriSLS","style": "esriSLSSolid"}}}]}}}]'
             };
 
             var source = new ol.source.TileArcGISRest({
