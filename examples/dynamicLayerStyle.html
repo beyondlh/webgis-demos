@@ -12,7 +12,7 @@
 <script>
     var projection = ol.proj.get('EPSG:4326');
     var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap_2015ncyw/MapServer";
-    var dynamticLayerUrl = "http://127.0.0.1:6080/arcgis/rest/services/GPSROADEVENTS";
+    var dynamticLayerUrl = "171.34.40.68:6080/arcgis/rest/services/jiangxi/GL_GPSROAD";
     var tileArcGISXYZ;
     $.ajax({
         url: tileUrl + "?f=pjson",
@@ -59,18 +59,76 @@
                 })
             });
             /*注意dynamicLyaers的写法
-            第一个是简单渲染，第二个是唯一值渲染。
-            * */
+             第一个是简单渲染，第二个是唯一值渲染。
+             dynamicLayers可通过json转string，不用軿凑
+             * */
+
+            var dynamicLayersJson = [{
+                id: 1,
+                source: {
+                    type: "dataLayer",
+                    dataSource: {
+                        type: "table",
+                        dataSourceName: "GISROAD_EVENTS",
+                        workspaceId: "MyFileGDBWorkspaceID"
+                    }
+                },
+                drawingInfo: {
+                    renderer: {
+                        type: "uniqueValue",
+                        field1: "LDXZDM",
+                        defaultSymbol: {
+                            color: [0, 0, 0, 64],
+                            outline: {
+                                color: [0, 0, 0, 255],
+                                width: 1,
+                                type: "esriSLS",
+                                style: "esriSLSNull"
+                            },
+                            type: "esriSFS",
+                            style: "esriSFSNull"
+                        },
+                        uniqueValueInfos: [{
+                            value: "1",
+                            symbol: {
+                                type: "esriSLS",
+                                style: "esriSLSSolid",
+                                width: 2,
+                                color: [255, 0, 0, 128],
+                                outline: {
+                                    color: [0, 0, 0, 255],
+                                    width: 1,
+                                    type: "esriSLS",
+                                    style: "esriSLSSolid"
+                                }
+                            }
+                        }, {
+                            value: "6",
+                            symbol: {
+                                type: "esriSLS",
+                                style: "esriSLSSolid",
+                                width: 2,
+                                color: [0, 255, 0, 128],
+                                outline: {
+                                    color: [0, 0, 0, 255],
+                                    width: 1,
+                                    type: "esriSLS",
+                                    style: "esriSLSSolid"
+                                }
+                            }
+                        }]
+                    }
+                }
+            }];
+
 
             var params = {
                 layers: 'show:0',
-                FORMAT: "png",
-                f: "image",
-                format: "png",
                 transparent: false,
 //                dynamicLayers: '[{"id":1,"source":{"type":"dataLayer","dataSource":{"type":"table","dataSourceName":"GISROAD_EVENTS","workspaceId":"MyFileGDBWorkspaceID"}},"drawingInfo":{"renderer": {"type":"simple", "symbol": {"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":2,"outline":{"type":"esriSLS","style":"esriSLSSolid","color":[0,255,0,255],"width":1}}}}}]'
                 dynamicLayers: '[{"id":1,"source":{"type":"dataLayer","dataSource":{"type":"table","dataSourceName":"GISROAD_EVENTS","workspaceId":"MyFileGDBWorkspaceID"}},"drawingInfo":{"renderer": {"type": "uniqueValue","field1": "LDXZDM","defaultSymbol": {"color": [0, 0, 0, 64],"outline": {"color": [0, 0, 0, 255],"width": 1,"type": "esriSLS","style": "esriSLSNull"},"type": "esriSFS","style": "esriSFSNull"},"uniqueValueInfos": [{"value": "1","symbol": {"type": "esriSLS","style": "esriSLSSolid","width":2,"color": [255, 0, 0, 128],"outline": {"color": [0, 0, 0, 255],"width": 1,"type": "esriSLS","style": "esriSLSSolid"},}}, {"value": "6","symbol": {"type": "esriSLS","style": "esriSLSSolid","width":2,"color": [0, 255, 0, 128],"outline": {"color": [0, 0, 0, 255],"width": 1,"type": "esriSLS","style": "esriSLSSolid"}}}]}}}]'
             };
+            params.dynamicLayers = JSON.stringify(dynamicLayersJson);
 
             var source = new ol.source.TileArcGISRest({
                 url: dynamticLayerUrl + '/MapServer',
