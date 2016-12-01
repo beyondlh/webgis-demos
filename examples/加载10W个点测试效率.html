@@ -48,9 +48,9 @@
             var map = new ol.Map({
                 target: 'map',
                 layers: [
-                    new ol.layer.Tile({
-                        source: tileArcGISXYZ
-                    })
+                    /*  new ol.layer.Tile({
+                     source: tileArcGISXYZ
+                     })*/
                 ],
                 view: new ol.View({
                     center: [109.15169990462329, 31.74108365827285],
@@ -79,7 +79,7 @@
             };
 
 
-            for (var count = 0; count < 20; count++) {
+            for (var count = 0; count < 200; count++) {
                 var obj = {
                     'type': 'Feature',
                     'geometry': {
@@ -114,19 +114,20 @@
                     fill: new ol.style.Fill({
                         color: "#E50000"
                     }),
-                    text:"2",
+                    textBaseline: "hanging",
+                    text: "2",
                     offsetX: 0.5,
-                    offsetY: -15,
+                    offsetY: -15
                 }),
                 fill: new ol.style.Fill({
                     color: 'rgba(67, 110, 238, 0.4)'
                 }),
                 stroke: new ol.style.Stroke({
                     color: '#4781d9',
-                    width: 2
+                    width: 20
                 }),
                 image: new ol.style.Circle({
-                    radius: 7,
+                    radius: 20,
                     fill: new ol.style.Fill({
                         color: '#ffcc33'
                     })
