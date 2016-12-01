@@ -14,29 +14,29 @@
 </html>
 <script>
     var projection = ol.proj.get('EPSG:4326');
-    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/SXGXPTMAPdyone/MapServer";
+    var tileUrl = "http://171.34.40.68:6080/arcgis/rest/services/JXMAP_2016_2/MapServer";
 
     $.ajax({
-        url     : tileUrl + "?f=pjson",
+        url: tileUrl + "?f=pjson",
         dataType: "json",
-        success : function (data) {
+        success: function (data) {
             var resolutions = [];
-            var origin      = [data.tileInfo.origin.x, data.tileInfo.origin.y];
-            var len         = data.tileInfo.lods.length;
-            var fullExtent  = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
+            var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
+            var len = data.tileInfo.lods.length;
+            var fullExtent = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
             for (var i = 0; i < len; i++) {
                 resolutions.push(data.tileInfo.lods[i].resolution);
             }
-            var tileGrid      = new ol.tilegrid.TileGrid({
-                tileSize   : data.tileInfo.cols,
-                origin     : origin,
-                extent     : fullExtent,
+            var tileGrid = new ol.tilegrid.TileGrid({
+                tileSize: data.tileInfo.cols,
+                origin: origin,
+                extent: fullExtent,
                 resolutions: resolutions
             });
-            var urlTemplate   = tileUrl + "/tile/{z}/{y}/{x}";
+            var urlTemplate = tileUrl + "/tile/{z}/{y}/{x}";
             var tileArcGISXYZ = new ol.source.XYZ({
-                tileGrid       : tileGrid,
-                projection     : projection,
+                tileGrid: tileGrid,
+                projection: projection,
                 tileUrlFunction: function (tileCoord) {
                     var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
                             .replace('{x}', tileCoord[1].toString())
@@ -45,45 +45,45 @@
                 }
             });
 
-            var map        = new ol.Map({
+            var map = new ol.Map({
                 target: 'map',
                 layers: [
                     new ol.layer.Tile({
                         source: tileArcGISXYZ
                     })
                 ],
-                view  : new ol.View({
-                    center    : [109.15169990462329, 31.74108365827285],
-                    zoom      : 4,
+                view: new ol.View({
+                    center: [109.15169990462329, 31.74108365827285],
+                    zoom: 4,
                     projection: projection,
-                    extent    : [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
+                    extent: [60.896230706385204, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
                 })
             });
             var coordinate = [109.15169990462329, 31.74108365827285];
 
             var geojsonObject = {
-                'type'    : 'FeatureCollection',
-                'crs'     : {
-                    'type'      : 'name',
+                'type': 'FeatureCollection',
+                'crs': {
+                    'type': 'name',
                     'properties': {
                         'name': 'EPSG:4326'
                     }
                 },
                 'features': [{
-                    'type'    : 'Feature',
+                    'type': 'Feature',
                     'geometry': {
-                        'type'       : 'Point',
+                        'type': 'Point',
                         'coordinates': [114.29, 39.123456]
                     }
                 }]
             };
 
 
-            for (var count = 0; count < 50000; count++) {
+            for (var count = 0; count < 20; count++) {
                 var obj = {
-                    'type'    : 'Feature',
+                    'type': 'Feature',
                     'geometry': {
-                        'type'       : 'Point',
+                        'type': 'Point',
                         'coordinates': [114.29, 39.123456]
                     }
                 };
@@ -101,16 +101,44 @@
             }
 
             var vectorSource = new ol.source.Vector({
-                features: (new ol.format.GeoJSON()).readFeatures(geojsonObject)
+                features: (new ol.format.GeoJSON()).readFeatures(geojsonObject),
+                wrapX: false
             });
-            var vectorLayer  = new ol.layer.Vector({
+            var vectorLayer = new ol.layer.Vector({
                 renderBuffer: 1000,
-                source      : vectorSource
+                source: vectorSource
             });
+            var style = new ol.style.Style({
+                text: new ol.style.Text({
+                    font: "30px serif",
+                    fill: new ol.style.Fill({
+                        color: "#E50000"
+                    }),
+                    text:"2",
+                    offsetX: 0.5,
+                    offsetY: -15,
+                }),
+                fill: new ol.style.Fill({
+                    color: 'rgba(67, 110, 238, 0.4)'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#4781d9',
+                    width: 2
+                }),
+                image: new ol.style.Circle({
+                    radius: 7,
+                    fill: new ol.style.Fill({
+                        color: '#ffcc33'
+                    })
+                })
+            });
+
+            vectorLayer.setStyle(style);
+
 
             map.addLayer(vectorLayer);
         },
-        error   : function (err) {
+        error: function (err) {
             console.error(err);
         }
     });
