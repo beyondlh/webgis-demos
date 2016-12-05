@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ol3加载天地图本地切片</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="http://openlayers.org/en/v3.13.0/css/ol.css" type="text/css">
+    <script src="http://openlayers.org/en/v3.13.0/build/ol.js"></script>
+</head>
+<body>
+<div id="map" class="map"></div>
+<script>
+
+
+    var map = new ol.Map({
+        target: 'map',
+        view  : new ol.View({
+            center: [0, 0],
+            zoom  : 2
+        })
+    });
+
+    var tian_di_tu_annotation = new ol.layer.Tile({
+        title: "天地图文字标注",
+        source: new ol.source.XYZ({
+            url: 'http://t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}'
+        })
+    });
+
+
+    var tian_di_tu_satellite_layer = new ol.layer.Tile({
+        title: "天地图卫星影像",
+        source: new ol.source.XYZ({
+            url: 'http://t3.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}'
+        })
+    });
+
+
+    var tian_di_tu_road_layer = new ol.layer.Tile({
+        title: "天地图路网",
+        source: new ol.source.XYZ({
+            url: "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}"
+        })
+    });
+
+
+    map.addLayer(tian_di_tu_satellite_layer);
+//    map.addLayer(tian_di_tu_road_layer);
+    map.addLayer(tian_di_tu_annotation);
+</script>
+</body>
+</html>

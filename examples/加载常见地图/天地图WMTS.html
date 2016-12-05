@@ -2,16 +2,21 @@
 <head>
     <title>天地图WMTS</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../lib/ol.css">
-    <script type="text/javascript" src="../lib/ol-debug.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="../../lib/ol.css">
+    <script type="text/javascript" src="../../lib/ol-debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../lib/proj4.js" charset="utf-8"></script>
 </head>
 
 <body>
 <div id="map" style="width:100%;"></div>
 <script>
-    var projection = ol.proj.get('EPSG:4326');
+    proj4.defs("EPSG:4490", "+proj=longlat +ellps=GRS80 +no_defs");
+        var projection = ol.proj.get('EPSG:4326');
+//    var projection = ol.proj.get('EPSG:4490');
+    projection.setExtent([-180, -90, 180, 90]);
     var projectionExtent = projection.getExtent();
     var size = ol.extent.getWidth(projectionExtent) / 256;
+    console.log("size:", size);
     var resolutions = new Array(14);
     var matrixIds = new Array(14);
     for (var z = 0; z < 14; ++z) {
@@ -19,10 +24,12 @@
         resolutions[z] = size / Math.pow(2, z);
         matrixIds[z] = z;
     }
+
+    console.log(resolutions);
     var tian_di_tu_road_layer = new ol.layer.Tile({
-        opacity: 0.7,
+        opacity: 1,
         source: new ol.source.WMTS({
-            url: 'http://t{0-6}.tianditu.com/vec_c/wmts',
+            url: 'http://t0.tianditu.com/vec_c/wmts',
             layer: 'vec',
             matrixSet: 'c',
             format: 'tiles',
@@ -33,7 +40,7 @@
                 matrixIds: matrixIds
             }),
             style: 'default',
-            wrapX: true
+            wrapX: false
         })
     });
 
