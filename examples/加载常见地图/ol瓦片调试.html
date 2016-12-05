@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>天地图WMTS</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../lib/ol.css">
+    <script type="text/javascript" src="../../lib/ol-debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../lib/proj4.js" charset="utf-8"></script>
+</head>
+
+<body>
+<div id="map" style="width:100%;"></div>
+<script>
+    var resolutions = [];
+    var tileSize = 256;
+    var extent = [12665080.52765571, 2550703.6338763316, 12725465.780000998, 2601457.820657688]; //深圳地区
+    var projection = new ol.proj.get("EPSG:3857");
+    var projectionExtent = projection.getExtent();
+
+    for (var i = 0; i < 19; i++) {
+        resolutions[i] = Math.pow(2, 18 - i);
+    }
+
+    var tilegrid = new ol.tilegrid.TileGrid({
+        origin: ol.extent.getBottomLeft(projectionExtent),
+        resolutions: resolutions,
+        extent: projectionExtent,//extent,
+        tileSize: [256, 256],
+    });
+
+    var map = new ol.Map({
+        target: "map",
+        layers: [
+            // 调试瓦片
+            new ol.layer.Tile({
+                source: new ol.source.TileDebug({
+                    projection: projection,
+                    tileGrid: tilegrid,
+                    tileSize: [256, 256],
+                    extent :  projectionExtent,
+                    wrapX: false
+                })
+            })
+        ],
+        view: new ol.View({
+            projection: projection,
+            center: [12697184.079535482, 2563239.3065151004],//深圳
+            resolutions: resolutions,
+        })
+    });
+    map.getView().setZoom(1);
+</script>
+</body>
+
+</html>
