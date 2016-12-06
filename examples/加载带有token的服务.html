@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Token Test</title>
+    <link rel="stylesheet" href="../lib/ol.css" type="text/css">
+    <script src="../lib/ol.js"></script>
+</head>
+<body>
+    <div id="olmap" class="map"></div>
+    <script>
+//            var url = 'http://127.0.0.1:6080/arcgis/rest/services/GPSROADEVENTS/MapServer?token=vVfRMJH_CeHvZIN6wTVRCJ-XYfeClzQ7Dx_Owj0QazZqFpnwGPOxOB2L-l_BS0MU';
+        var url = 'http://127.0.0.1:6080/arcgis/rest/services/GPSROADEVENTS/MapServer';
+        var projection = ol.proj.get('EPSG:4326');
+
+        var map = new ol.Map({
+            target: 'olmap',
+            view: new ol.View({
+                center: [115.15169990462329, 26.74108365827285],
+                zoom: 6,
+                projection: projection,
+                extent: [113.57502833300009, 24.50095333300004, 118.47531500000002, 30.072808364000025]
+            })
+        });
+        var params = {
+            layers: 'show:0',
+            transparent: false,
+            token:"vVfRMJH_CeHvZIN6wTVRCJ-XYfeClzQ7Dx_Owj0QazZqFpnwGPOxOB2L-l_BS0MU"
+        };
+        var layer = new ol.layer.Tile({
+            source: new ol.source.TileArcGISRest({
+                url: url,
+                params: params
+            })
+        });
+        map.addLayer(layer);
+    </script>
+</body>
+</html>

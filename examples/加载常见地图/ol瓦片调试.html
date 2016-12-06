@@ -24,7 +24,7 @@
         origin: ol.extent.getBottomLeft(projectionExtent),
         resolutions: resolutions,
         extent: projectionExtent,//extent,
-        tileSize: [256, 256],
+        tileSize: [256, 256]
     });
 
     var map = new ol.Map({
@@ -36,7 +36,7 @@
                     projection: projection,
                     tileGrid: tilegrid,
                     tileSize: [256, 256],
-                    extent :  projectionExtent,
+                    extent: projectionExtent,
                     wrapX: false
                 })
             })

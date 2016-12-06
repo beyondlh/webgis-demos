@@ -11,8 +11,8 @@
 <div id="map" style="width:100%;"></div>
 <script>
     proj4.defs("EPSG:4490", "+proj=longlat +ellps=GRS80 +no_defs");
-        var projection = ol.proj.get('EPSG:4326');
-//    var projection = ol.proj.get('EPSG:4490');
+    var projection = ol.proj.get('EPSG:4326');
+    //    var projection = ol.proj.get('EPSG:4490');
     projection.setExtent([-180, -90, 180, 90]);
     var projectionExtent = projection.getExtent();
     var size = ol.extent.getWidth(projectionExtent) / 256;
