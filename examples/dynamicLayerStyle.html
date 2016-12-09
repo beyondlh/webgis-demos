@@ -8,16 +8,16 @@
     <script src="../lib/jquery-1.8.0.min.js"></script>
 </head>
 <body>
-<div id="map" class="map"></div>
-<script>
-    var projection = ol.proj.get('EPSG:4326');
-    var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap_2015ncyw/MapServer";
-    var dynamticLayerUrl = "http://171.34.40.68:6080/arcgis/rest/services/jiangxi/GL_GPSROAD";
-    var tileArcGISXYZ;
-    $.ajax({
-        url: tileUrl + "?f=pjson",
-        dataType: "json",
-        success: function (data) {
+    <div id="map" class="map"></div>
+    <script>
+        var projection = ol.proj.get('EPSG:4326');
+        var tileUrl = "http://211.101.37.251:6080/arcgis/rest/services/jxgxptmap_2015ncyw/MapServer";
+        var dynamticLayerUrl = "http://171.34.40.68:6080/arcgis/rest/services/jiangxi/GL_GPSROAD";
+        var tileArcGISXYZ;
+        $.ajax({
+            url: tileUrl + "?f=pjson",
+            dataType: "json",
+            success: function (data) {
 //            var resolutions = [];
 //            var origin = [data.tileInfo.origin.x, data.tileInfo.origin.y];
 //            var len = data.tileInfo.lods.length;
@@ -43,102 +43,104 @@
 //                }
 //            });
 
-            var map = new ol.Map({
-                controls: [new ol.control.ScaleLine()],
-                target: 'map',
-                view: new ol.View({
-                    center: [109.15169990462329, 31.74108365827285],
-                    zoom: 6,
-                    projection: projection,
-                    extent: [113.57502833300009, 24.50095333300004, 118.47531500000007, 30.07280836400003]
-                })
-            });
-            /*注意dynamicLyaers的写法
-             第一个是简单渲染，第二个是唯一值渲染。
-             dynamicLayers可通过json转string，不用拼凑
-             * */
+                var map = new ol.Map({
+                    controls: [new ol.control.ScaleLine()],
+                    target: 'map',
+                    view: new ol.View({
+                        center: [109.15169990462329, 31.74108365827285],
+                        zoom: 6,
+                        projection: projection,
+                        extent: [113.57502833300009, 24.50095333300004, 118.47531500000007, 30.07280836400003]
+                    })
+                });
+                /*注意dynamicLyaers的写法
+                 第一个是简单渲染，第二个是唯一值渲染。
+                 dynamicLayers可通过json转string，不用拼凑
+                 * */
 
-            var dynamicLayersJson = [{
-                id: 1,
-                source: {
-                    type: "dataLayer",
-                    dataSource: {
-                        type: "table",
-                        dataSourceName: "GISROAD_EVENTS",
-                        workspaceId: "MyFileGDBWorkspaceID"
-                    }
-                },
-                definitionExpression: "LXBM  = 'G105'",
-                drawingInfo: {
-                    renderer: {
-                        type: "uniqueValue",
-                        field1: "LDXZDM",
-                        defaultSymbol: {
-                            color: [0, 0, 0, 64],
-                            outline: {
-                                color: [0, 0, 0, 255],
-                                width: 1,
-                                type: "esriSLS",
-                                style: "esriSLSNull"
+                var dynamicLayersJson = [{
+                    id: 1,
+                    source: {
+                        type: "dataLayer",
+                        dataSource: {
+                            type: "table",
+                            dataSourceName: "GISROAD_EVENTS",
+                            workspaceId: "MyFileGDBWorkspaceID"
+                        }
+                    },
+//                    definitionExpression: "LOWER(LXBM)  = 'g105'",
+//                    definitionExpression: "LXBM IN ('G105')",
+                    definitionExpression: "SUBSTRING(LXBM,1,1) IN('G')",
+                    drawingInfo: {
+                        renderer: {
+                            type: "uniqueValue",
+                            field1: "LDXZDM",
+                            defaultSymbol: {
+                                color: [0, 0, 0, 64],
+                                outline: {
+                                    color: [0, 0, 0, 255],
+                                    width: 1,
+                                    type: "esriSLS",
+                                    style: "esriSLSNull"
+                                },
+                                type: "esriSFS",
+                                style: "esriSFSNull"
                             },
-                            type: "esriSFS",
-                            style: "esriSFSNull"
-                        },
-                        uniqueValueInfos: [{
-                            value: "1",
-                            symbol: {
-                                type: "esriSLS",
-                                style: "esriSLSSolid",
-                                width: 2,
-                                color: [255, 0, 0, 128],
-                                outline: {
-                                    color: [0, 0, 0, 255],
-                                    width: 1,
+                            uniqueValueInfos: [{
+                                value: "1",
+                                symbol: {
                                     type: "esriSLS",
-                                    style: "esriSLSSolid"
+                                    style: "esriSLSSolid",
+                                    width: 2,
+                                    color: [255, 0, 0, 128],
+                                    outline: {
+                                        color: [0, 0, 0, 255],
+                                        width: 1,
+                                        type: "esriSLS",
+                                        style: "esriSLSSolid"
+                                    }
                                 }
-                            }
-                        }, {
-                            value: "6",
-                            symbol: {
-                                type: "esriSLS",
-                                style: "esriSLSSolid",
-                                width: 2,
-                                color: [0, 255, 0, 128],
-                                outline: {
-                                    color: [0, 0, 0, 255],
-                                    width: 1,
+                            }, {
+                                value: "6",
+                                symbol: {
                                     type: "esriSLS",
-                                    style: "esriSLSSolid"
+                                    style: "esriSLSSolid",
+                                    width: 2,
+                                    color: [0, 255, 0, 128],
+                                    outline: {
+                                        color: [0, 0, 0, 255],
+                                        width: 1,
+                                        type: "esriSLS",
+                                        style: "esriSLSSolid"
+                                    }
                                 }
-                            }
-                        }]
+                            }]
+                        }
                     }
-                }
-            }];
+                }];
 
 
-            var params = {
-                layers: 'show:0',
-                transparent: false
-            };
-            params.dynamicLayers = JSON.stringify(dynamicLayersJson);
+                var params = {
+                    layers: 'show:0',
+                    transparent: false
+                };
+                params.dynamicLayers = JSON.stringify(dynamicLayersJson);
 
-            var source = new ol.source.TileArcGISRest({
-                url: dynamticLayerUrl + '/MapServer',
-                params: params,
-                wrapX: false
-            });
-            var layer = new ol.layer.Tile({
-                title: "测试图层",
-                source: source
-            });
-            map.addLayer(layer);
-        },
-        error: function (err) {
-            console.error(err);
-        }
-    });
-</script>
+                var source = new ol.source.TileArcGISRest({
+                    url: dynamticLayerUrl + '/MapServer',
+                    params: params,
+                    wrapX: false
+                });
+                var layer = new ol.layer.Tile({
+                    title: "测试图层",
+                    source: source
+                });
+                map.addLayer(layer);
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        });
+    </script>
 </body>
 </html>
