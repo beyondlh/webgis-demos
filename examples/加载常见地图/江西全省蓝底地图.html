@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ArcGIS REST with 256x256 Tiles</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" type="text/css">
+    <script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>
+    <script src="../../lib/jquery-1.8.0.min.js"></script>
+</head>
+<body>
+<div id="map" class="map"></div>
+<script>
+    var projection = ol.proj.get('EPSG:4326');
+    var tileUrl = "http://220.175.137.218:6080/arcgis/rest/services/jiangxi/blue_map_2019/MapServer";
+    var url = 'http://220.175.137.218:6080/arcgis/rest/services/jiangxi/thematic/MapServer';
+    var tileArcGISXYZ;
+    $.ajax({
+        url     : tileUrl + "?f=pjson",
+        dataType: "json",
+        success : function (data) {
+            var resolutions = [];
+            var origin      = [data.tileInfo.origin.x, data.tileInfo.origin.y];
+            var len         = data.tileInfo.lods.length;
+            var fullExtent  = [data.fullExtent.xmin, data.fullExtent.ymin, data.fullExtent.xmax, data.fullExtent.ymax];
+            for (var i = 0; i < len; i++) {
+                resolutions.push(data.tileInfo.lods[i].resolution);
+            }
+            var tileGrid      = new ol.tilegrid.TileGrid({
+                tileSize   : data.tileInfo.cols,
+                origin     : origin,
+                extent     : fullExtent,
+                resolutions: resolutions
+            });
+            var urlTemplate   = tileUrl + "/tile/{z}/{y}/{x}";
+            tileArcGISXYZ = new ol.source.XYZ({
+                tileGrid       : tileGrid,
+                projection     : projection,
+                tileUrlFunction: function (tileCoord) {
+                    var url = urlTemplate.replace('{z}', (tileCoord[0]).toString())
+                            .replace('{x}', tileCoord[1].toString())
+                            .replace('{y}', (-tileCoord[2] - 1).toString());
+                    return url;
+                }
+            });
+
+            var map = new ol.Map({
+                controls: [new ol.control.ScaleLine()],
+                target: 'map',
+                layers: [
+                    new ol.layer.Tile({
+                        source: tileArcGISXYZ
+                    }),
+                    new ol.layer.Image({
+                        source: new ol.source.ImageArcGISRest({
+                            ratio: 1,
+                            params: {
+                                layers:"show:0"
+                            },
+                            url: url
+                        })
+                    })
+                ],
+                view  : new ol.View({
+                    center    : [109.15169990462329, 31.74108365827285],
+                    zoom      : 4,
+                    projection: projection,
+                    extent    : [4.96, 0.9508582428290315, 157.40716910286136, 62.53130907371668]
+                })
+            });
+           /* map.on("postrender",function (event) {
+                console.log("postrender")
+            });
+            map.on("postcompose",function (event) {
+                console.log("postcompose")
+            });*/
+            tileArcGISXYZ.on("tileloadend",function (ev) {
+                console.log(33);
+            });
+
+        },
+        error   : function (err) {
+            console.error(err);
+        }
+    });
+</script>
+</body>
+</html>
