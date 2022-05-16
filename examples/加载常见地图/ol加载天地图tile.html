@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ol3加载天地图本地切片</title>
+    <title>ol3加载天地图切片</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../../lib/ol.css">
     <script type="text/javascript" src="../../lib/ol-debug.js" charset="utf-8"></script>
@@ -16,37 +16,36 @@
         target: 'map',
         view  : new ol.View({
             center: [0, 0],
-            zoom  : 2
+            zoom  :1
         })
     });
-
-    var tian_di_tu_annotation = new ol.layer.Tile({
-        title: "天地图文字标注",
-        source: new ol.source.XYZ({
-            url: 'http://t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=2aa98d35c5be8110c188c08540a57493'
-        })
-    });
+    //
+    // var tian_di_tu_annotation = new ol.layer.Tile({
+    //     title: "天地图文字标注",
+    //     source: new ol.source.XYZ({
+    //         url: 'http://t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}&tk=2aa98d35c5be8110c188c08540a57493'
+    //     })
+    // });
 
 
     var tian_di_tu_satellite_layer = new ol.layer.Tile({
         title: "天地图卫星影像",
         source: new ol.source.XYZ({
             url: 'http://t3.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=2aa98d35c5be8110c188c08540a57493'
-        })
-    });
+        })});
 
-
-    var tian_di_tu_road_layer = new ol.layer.Tile({
-        title: "天地图路网",
-        source: new ol.source.XYZ({
-            url: "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=2aa98d35c5be8110c188c08540a57493"
-        })
-    });
+    //
+    // var tian_di_tu_road_layer = new ol.layer.Tile({
+    //     title: "天地图路网",
+    //     source: new ol.source.XYZ({
+    //         url: "http://t4.tianditu.com/DataServer?T=vec_w&x={x}&y={y}&l={z}&tk=2aa98d35c5be8110c188c08540a57493"
+    //     })
+    // });
 
 
     map.addLayer(tian_di_tu_satellite_layer);
 //    map.addLayer(tian_di_tu_road_layer);
-    map.addLayer(tian_di_tu_annotation);
+//     map.addLayer(tian_di_tu_annotation);
 </script>
 </body>
 </html>

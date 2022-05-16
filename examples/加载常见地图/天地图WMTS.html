@@ -1,5 +1,14 @@
 <html>
 <head>
+    <!--
+    WMTS与XYZ方式比较
+    相同点：(1)不管采用哪种方式，显示的效果是一致的； (2)加载地图的类型参数应与投影参数保持一致。
+    不同点：(1)WMTS使用的数据源类型为ol.source.WMTS，XYZ方式使用的数据源类型为ol.source.XYZ；
+          (2)WMTS方式遵从标准的OGC规范，需要计算、指定分辨率、显示级别等，根据WMTS服务加载的标准规范加载天地图，XYZ方式只需根据天地图规定组装简单的url即可；
+          (3)实际使用中，难度上WMTS更繁琐，效率上XYZ更优。
+          结论：推荐使用XYZ的方式加载天地图服务(同时也是加载Google地图的首选)。
+          参考 https://blog.csdn.net/shaxiaozilove/article/details/80371754
+    -->
     <title>天地图WMTS</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../../lib/ol.css">
@@ -10,17 +19,13 @@
 <body>
 <div id="map" style="width:100%;"></div>
 <script>
-    proj4.defs("EPSG:4490", "+proj=longlat +ellps=GRS80 +no_defs");
     var projection = ol.proj.get('EPSG:4326');
-    //    var projection = ol.proj.get('EPSG:4490');
     projection.setExtent([-180, -90, 180, 90]);
     var projectionExtent = projection.getExtent();
     var size = ol.extent.getWidth(projectionExtent) / 256;
-    console.log("size:", size);
-    var resolutions = new Array(14);
-    var matrixIds = new Array(14);
-    for (var z = 0; z < 14; ++z) {
-        // generate resolutions and matrixIds arrays for this WMTS
+    var resolutions = new Array(19);
+    var matrixIds = new Array(19);
+    for (var z = 1; z < 19; ++z) {
         resolutions[z] = size / Math.pow(2, z);
         matrixIds[z] = z;
     }
@@ -29,9 +34,9 @@
     var tian_di_tu_road_layer = new ol.layer.Tile({
         opacity: 1,
         source: new ol.source.WMTS({
-            url: 'http://t0.tianditu.com/vec_c/wmts',
-            layer: 'vec',
-            matrixSet: 'c',
+            url: 'http://t' + Math.round(Math.random() * 7) + '.tianditu.gov.cn/img_c/wmts?tk=2aa98d35c5be8110c188c08540a57493',
+            layer: "img_c".substr(0, 3),
+            matrixSet: "img_c".substr(4),
             format: 'tiles',
             projection: projection,
             tileGrid: new ol.tilegrid.WMTS({
@@ -44,33 +49,17 @@
         })
     });
 
+    debugger;
     // 创建地图
     var map = new ol.Map({
         layers: [tian_di_tu_road_layer],
         view: new ol.View({
-            center: [12273952.253920462, 3947819.636872783],
+            center: [114, 36],
             zoom: 6
         }),
         target: "map"
     });
     window.hdmap = map;
-    /*
-     var tian_di_tu_annotation = new ol.layer.Tile({
-     title: "天地图文字标注",
-     source: new ol.source.XYZ({
-     url: 'http://t3.tianditu.com/DataServer?T=cva_w&x={x}&y={y}&l={z}'
-     })
-     });
-     map.addLayer(tian_di_tu_annotation);*/
-
-    /*
-     var tian_di_tu_satellite_layer = new ol.layer.Tile({
-     title: "天地图卫星影像",
-     source: new ol.source.XYZ({
-     url: 'http://t3.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}'
-     })
-     });
-     map.addLayer(tian_di_tu_satellite_layer);*/
 </script>
 </body>
 
