@@ -1,0 +1,81 @@
+<html>
+<head>
+    <title>平顶山图</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../../lib/ol.css">
+    <script type="text/javascript" src="../../../lib/ol-debug.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../../../lib/proj4.js" charset="utf-8"></script>
+
+    <!--    <link rel="stylesheet" type="text/css" href="https://openlayers.org/en/v3.20.1/css/ol.css">-->
+    <!--    <script type="text/javascript" src="https://openlayers.org/en/v3.20.1/build/ol.js" charset="utf-8"></script>-->
+    <!--    <script src="https://cdn.bootcdn.net/ajax/libs/proj4js/2.8.0/proj4.js"></script>-->
+</head>
+
+<body>
+<div id="map" style="width:100%;"></div>
+<script>
+    var projection = ol.proj.get('EPSG:4326');
+    projection.setExtent([-180, -90, 180, 90]);
+    projection.setWorldExtent([-180, -90, 180, 90]);
+    var projectionExtent = projection.getExtent();
+    var resolutions = new Array();
+    resolutions.push(0.7031249999990241);
+    resolutions.push(0.3515625000000313);
+    resolutions.push(0.17578125000001618);
+    resolutions.push(0.08789062500000809);
+    resolutions.push(0.043945312500003914);
+    resolutions.push(0.021972656249969493);
+    resolutions.push(0.010986328124999981);
+    resolutions.push(0.0054931640624999905);
+    resolutions.push(0.002746582031250007);
+    resolutions.push(0.0013732910156249987);
+    resolutions.push(0.0006866455078124993);
+    resolutions.push(0.00034332275390625087);
+    resolutions.push(0.00017166137695312497);
+    resolutions.push(0.00008583068847656249);
+    resolutions.push(0.00004291534423828124);
+    resolutions.push(0.00002145767211914062);
+    resolutions.push(0.00001072883605957031);
+    resolutions.push(0.000005364418029785168);
+    resolutions.push(0.000002682209014892584);
+    resolutions.push(0.000001341104507446292);
+
+    var matrixIds = new Array();
+    for (var z = 0; z < resolutions.length; ++z) {
+        matrixIds[z] = z;
+    }
+
+    console.log(resolutions);
+    var tian_di_tu_road_layer = new ol.layer.Tile({
+        opacity: 1,
+        source: new ol.source.WMTS({
+            url: 'http://222.85.34.130:8081/geoesb/proxy/ff56b1eac03047d193db62fd16db9caa/072a3bd4b19c459288df5a672f02f32e',
+            layer: 'PDS_DLG_2019',
+            matrixSet: 'CustomCRS4490ScalePDS_DLG_2019',
+            format: 'image/png',
+            tileSize: [256, 256],
+            projection: projection,
+            tileGrid: new ol.tilegrid.WMTS({
+                origin: ol.extent.getTopLeft(projectionExtent),
+                resolutions: resolutions,
+                matrixIds: matrixIds
+            }),
+            style: 'default',
+            wrapX: false
+        })
+    });
+
+    // 创建地图
+    var map = new ol.Map({
+        layers: [tian_di_tu_road_layer],
+        view: new ol.View({
+            center: [12741135.37079946, 3949654.1255516275],
+            zoom: 8
+        }),
+        target: "map"
+    });
+    window.hdmap = map;
+</script>
+</body>
+
+</html>
