@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>arcgis api 加载本地图片叠加要素</title>
+</head>
+<style type="text/css">
+    .map {
+        height: 1000px;
+        width: 100%;
+    }
+</style>
+<!--<script src="http://127.0.0.1:8989/arcgis/4.17/init.js"></script>-->
+<!--<link rel="stylesheet" href="http://127.0.0.1:8989/arcgis/4.17/esri/css/main.css">-->
+<script src="../../lib/jquery-1.8.0.min.js"></script>
+<script src="http://www.skaqjc.cn:8089/arcgisapi/4.24/init.js"></script>
+<link rel="stylesheet" href="http://127.0.0.1:8989/arcgis/4.17/esri/css/main.css">
+<body>
+<div id="regionMap" class="map"></div>
+</body>
+<script>
+
+    require([
+            'esri/config',
+            'esri/request',
+            'esri/layers/TileLayer',
+            "esri/layers/GraphicsLayer",
+            "esri/layers/MapImageLayer",
+            "esri/layers/FeatureLayer",
+            "esri/layers/GeoJSONLayer",
+            'esri/Map',
+            "esri/Graphic",
+            "esri/layers/GroupLayer",
+            'esri/Basemap',
+            'esri/views/MapView',
+            "esri/layers/BaseDynamicLayer"
+        ],
+        function (esriConfig, esriRequest, TileLayer, GraphicsLayer, MapImageLayer, FeatureLayer,
+                  GeoJSONLayer, Map, Graphic, GroupLayer, Basemap, MapView, BaseDynamicLayer) {
+
+
+            //自定义叠加图片图层
+            var CustomImageOverlayLayer = BaseDynamicLayer.createSubclass({
+                properties: {
+                    picUrl: null,
+                    extent: null,
+                    image: null,
+                    canvas: null,
+                },
+
+                // Override the getImageUrl() method to generate URL
+                // to an image for a given extent, width, and height.
+                getImageUrl: function (extent, width, height) {
+                    //新Image对象，可以理解为DOM
+                    if (!this.image) {
+                        this.image = new Image();
+                    }
+                    this.image.src = this.picUrl;
+
+                    // 创建canvas DOM元素，并设置其宽高和图片一样
+                    if (!this.canvas) {
+                        this.canvas = canvas = document.createElement("canvas");
+                    }
+                    this.canvas.width = 9522;
+                    this.canvas.height = 5675;
+
+                    //左上角地理坐标转换屏幕坐标,为了获取canvas绘制图片的起点
+                    var mapPoint = {
+                        x: this.extent.xmin,
+                        y: this.extent.ymax,
+                        spatialReference: {
+                            wkid: 4326
+                        }
+                    };
+                    var screenPoint = view.toScreen(mapPoint);
+                    //根据extent范围计算canvas绘制图片的宽度以及高度
+                    //左下角
+                    var leftbottom = {
+                        x: this.extent.xmin,
+                        y: this.extent.ymin,
+                        spatialReference: {
+                            wkid: 4326
+                        }
+                    };
+                    var screen_leftbottom = view.toScreen(leftbottom);
+                    //右上角
+                    var righttop = {
+                        x: this.extent.xmax,
+                        y: this.extent.ymax,
+                        spatialReference: {
+                            wkid: 4326
+                        }
+                    };
+                    var screen_righttop = view.toScreen(righttop);
+                    this.canvas.getContext("2d").drawImage(this.image, screenPoint.x, screenPoint.y, Math.abs(screen_righttop.x - screen_leftbottom.x), Math.abs(screen_righttop.y - screen_leftbottom.y));
+                    return this.canvas.toDataURL("image/png");
+
+                }
+            });
+
+            esriConfig.fontsUrl = 'http://10.20.2.101/fonts/';
+
+            var graphicsLayer = new GraphicsLayer();
+
+            let map = new Map({
+                basemap: ['osm', graphicsLayer]
+            });
+            let view = new MapView({
+                map: map,
+                container: "regionMap",
+                ui: {components: ['zoom', 'home']},
+                zoom: 12,
+                center: [113.928, 34.339],
+                popup: {
+                    alignment: "top-center",
+                    spinnerEnabled: false
+                }
+            });
+            view.when(function () {
+                var ImageOverlayLayer = new CustomImageOverlayLayer({
+                    picUrl: "http://localhost:63342/ol3-demos/arcgisapi/22.jpg?_ijt=6dcmlrrk37a3tde1i58caijjkn",
+                    extent: {
+                        xmin: 113.91738777975,
+                        ymin: 34.33433634475,
+                        xmax: 113.93654719265,
+                        ymax: 34.34408090995
+                    }
+                });
+                map.add(ImageOverlayLayer);
+                //地图移动刷新,防止地图初始化时候，图片叠加图层加载刷新不过来
+                setTimeout(function () {
+                    let center = [113.928, 34.339];
+                    view.center = center;
+                    view.goTo(view.center,
+                        {
+                            speedFactor: 0.1,
+                            easing: "linear" //linear, in-cubic, out-cubic, in-out-cubic, in-expo, out-expo, in-out-expo
+                        });
+                }, 500);
+            }, function (error) {
+                console.log("图片叠加失败: ", error);
+            });
+
+
+            $.ajax({
+                url: "../data/222.json",
+                dataType: "json",
+                success: function (res) {
+                    let graphics = []
+
+                    let features = res.features;
+                    let length = features.length;
+                    for (let m = 0; m < length; m++) {
+                        let element = features[m];
+
+
+                        let geometry = element.geometry //面的矢量数据
+                        let attributes = element.attributes //字段属性信息
+                        let point = { //面实例
+                            type: 'point',
+                            longitude: geometry.x,
+                            latitude: geometry.y,
+                            attributes: attributes,
+                            spatialReference: {wkid: 4326}
+                        }
+                        let pointGraphics = new Graphic({
+                            geometry: point,
+                            symbol: {type: "simple-fill"}
+                        });
+                        graphicsLayer.add(pointGraphics);
+                    }
+                },
+                error: function (err) {
+                    console.error(err);
+                }
+            });
+        });
+</script>
+</html>

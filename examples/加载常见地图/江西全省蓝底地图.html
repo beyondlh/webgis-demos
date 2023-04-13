@@ -9,9 +9,8 @@
 <body>
 <div id="map" class="map"></div>
 <script>
-    var projection = ol.proj.get('EPSG:4326');
-    var tileUrl = "http://220.175.137.218:6080/arcgis/rest/services/jiangxi/blue_map_2019/MapServer";
-    var url = 'http://220.175.137.218:6080/arcgis/rest/services/jiangxi/thematic/MapServer';
+    var projection = ol.proj.get('EPSG:3857');
+    var tileUrl = "http://pt.ysy.com.cn/server/rest/services/Basemap/HNBasemap_LSB_FINAL/MapServer";
     var tileArcGISXYZ;
     $.ajax({
         url     : tileUrl + "?f=pjson",
@@ -49,15 +48,6 @@
                     new ol.layer.Tile({
                         source: tileArcGISXYZ
                     }),
-                    new ol.layer.Image({
-                        source: new ol.source.ImageArcGISRest({
-                            ratio: 1,
-                            params: {
-                                layers:"show:0"
-                            },
-                            url: url
-                        })
-                    })
                 ],
                 view  : new ol.View({
                     center    : [109.15169990462329, 31.74108365827285],

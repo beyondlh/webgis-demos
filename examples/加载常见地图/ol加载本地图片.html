@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .map {
+        height: 1000px;
+        width: 100%;
+    }
+</style>
+<script src="/lib/jquery-1.8.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ol@v7.1.0/dist/ol.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.1.0/ol.css">
+<body>
+<div id="map" class="map"></div>
+</body>
+<script>
+    var map = new ol.Map({
+        target: 'map'
+    })
+
+    // 地图设置中心
+    var center = [113.928, 34.339];
+    // 视图
+    var view = new ol.View({
+        projection: "EPSG:4326",
+        center: center,
+        zoom: 15
+    })
+
+    map.setView(view)
+    // 计算图片映射到地图上的范围，保持比例的情况下。 放大100倍 除以2 让图片中心点和地图中心点重合
+    // var extent = [113.918078, 34.334488, 113.936320,34.343684];
+    var extent = [113.91738777975, 34.33433634475, 113.93654719265, 34.34408090995];
+    // 加载图片图层
+    map.addLayer(
+        new ol.layer.Image({
+            source: new ol.source.ImageStatic({
+                url: '../../img/22.jpg',
+                imageExtent: extent
+            })
+        })
+    )
+    const vectorSource = new ol.source.Vector({wrapX: false});
+    const vectorLayer = new ol.layer.Vector({
+        source: vectorSource,
+        style: {
+            'fill-color': 'rgba(255,204,51,0)',
+            'stroke-color': '#ffcc33',
+            'stroke-width': 12,
+            'circle-radius': 12,
+            'circle-fill-color': 'rgba(255,204,51,0)',
+        }
+    });
+    map.addLayer(vectorLayer);
+
+    $.ajax({
+        url: "../../data/222.json",
+        dataType: "json",
+        success: function (res) {
+            let features = res.features;
+            let length = features.length;
+            for (let m = 0; m < length; m++) {
+                let fea = features[m];
+                let feature = new ol.Feature({
+                    geometry: new ol.geom.Point([fea.geometry.x, fea.geometry.y])
+                });
+                vectorSource.addFeature(feature);
+            }
+        },
+        error: function (err) {
+            console.error(err);
+        }
+    });
+</script>
+</html>

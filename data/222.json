@@ -1,0 +1,4563 @@
+{
+  "displayFieldName" : "",
+  "hasZ" : true,
+  "hasM" : true,
+  "fieldAliases" : {
+    "OBJECTID_1" : "OBJECTID_1",
+    "OBJECTID" : "OBJECTID",
+    "type" : "type",
+    "Shape_Leng" : "Shape_Leng",
+    "name" : "name",
+    "id" : "id",
+    "datumn" : "datumn",
+    "n" : "n",
+    "width" : "width",
+    "height" : "height",
+    "discharge" : "discharge",
+    "level" : "level",
+    "top_h" : "top_h",
+    "atreach" : "atreach",
+    "gate_type" : "gate_type",
+    "ORIG_FID" : "ORIG_FID"
+  },
+  "geometryType" : "esriGeometryPoint",
+  "spatialReference" : {
+    "wkid" : 4326,
+    "latestWkid" : 4326
+  },
+  "fields" : [
+    {
+      "name" : "OBJECTID_1",
+      "type" : "esriFieldTypeOID",
+      "alias" : "OBJECTID_1"
+    },
+    {
+      "name" : "OBJECTID",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "OBJECTID"
+    },
+    {
+      "name" : "type",
+      "type" : "esriFieldTypeString",
+      "alias" : "type",
+      "length" : 50
+    },
+    {
+      "name" : "Shape_Leng",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "Shape_Leng"
+    },
+    {
+      "name" : "name",
+      "type" : "esriFieldTypeString",
+      "alias" : "name",
+      "length" : 50
+    },
+    {
+      "name" : "id",
+      "type" : "esriFieldTypeString",
+      "alias" : "id",
+      "length" : 50
+    },
+    {
+      "name" : "datumn",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "datumn"
+    },
+    {
+      "name" : "n",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "n"
+    },
+    {
+      "name" : "width",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "width"
+    },
+    {
+      "name" : "height",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "height"
+    },
+    {
+      "name" : "discharge",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "discharge"
+    },
+    {
+      "name" : "level",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "level"
+    },
+    {
+      "name" : "top_h",
+      "type" : "esriFieldTypeDouble",
+      "alias" : "top_h"
+    },
+    {
+      "name" : "atreach",
+      "type" : "esriFieldTypeString",
+      "alias" : "atreach",
+      "length" : 50
+    },
+    {
+      "name" : "gate_type",
+      "type" : "esriFieldTypeString",
+      "alias" : "gate_type",
+      "length" : 50
+    },
+    {
+      "name" : "ORIG_FID",
+      "type" : "esriFieldTypeInteger",
+      "alias" : "ORIG_FID"
+    }
+  ],
+  "features" : [
+    {
+      "attributes" : {
+        "OBJECTID_1" : 1,
+        "OBJECTID" : 1,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 0
+      },
+      "geometry" : {
+        "x" : 113.93343145709616,
+        "y" : 34.334641006477341,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 2,
+        "OBJECTID" : 2,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 1
+      },
+      "geometry" : {
+        "x" : 113.93342543613505,
+        "y" : 34.334995626247178,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 3,
+        "OBJECTID" : 3,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.242038236900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 2
+      },
+      "geometry" : {
+        "x" : 113.93626357150663,
+        "y" : 34.336107569608714,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 4,
+        "OBJECTID" : 4,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.242038223900003,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 3
+      },
+      "geometry" : {
+        "x" : 113.92956794260658,
+        "y" : 34.336105260149679,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 5,
+        "OBJECTID" : 5,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.2420382313,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 4
+      },
+      "geometry" : {
+        "x" : 113.93089005483228,
+        "y" : 34.336109593982655,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 6,
+        "OBJECTID" : 6,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.242038221999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 5
+      },
+      "geometry" : {
+        "x" : 113.92409986941345,
+        "y" : 34.336107049800546,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 7,
+        "OBJECTID" : 7,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 6
+      },
+      "geometry" : {
+        "x" : 113.92468832550583,
+        "y" : 34.337129784012347,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 8,
+        "OBJECTID" : 8,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 7
+      },
+      "geometry" : {
+        "x" : 113.93502092247763,
+        "y" : 34.337263938579952,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 9,
+        "OBJECTID" : 9,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 8
+      },
+      "geometry" : {
+        "x" : 113.934517475701,
+        "y" : 34.337266150912171,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 10,
+        "OBJECTID" : 10,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 9
+      },
+      "geometry" : {
+        "x" : 113.9238840914777,
+        "y" : 34.33735434472726,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 11,
+        "OBJECTID" : 11,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 10
+      },
+      "geometry" : {
+        "x" : 113.93263825954807,
+        "y" : 34.337383776839886,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 12,
+        "OBJECTID" : 12,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 11
+      },
+      "geometry" : {
+        "x" : 113.93183483131247,
+        "y" : 34.337385128520907,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 13,
+        "OBJECTID" : 13,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 29.121019091499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 12
+      },
+      "geometry" : {
+        "x" : 113.93050037319369,
+        "y" : 34.337603740220459,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 14,
+        "OBJECTID" : 14,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771027800001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 13
+      },
+      "geometry" : {
+        "x" : 113.92940447373758,
+        "y" : 34.337620792265795,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 15,
+        "OBJECTID" : 15,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 14
+      },
+      "geometry" : {
+        "x" : 113.92940410591484,
+        "y" : 34.338058941067345,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 16,
+        "OBJECTID" : 16,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : "朱固闸",
+        "id" : "ZGQ_ZGZ",
+        "datumn" : 78.329999999999998,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 61.82,
+        "level" : 80.400000000000006,
+        "top_h" : 81.900000000000006,
+        "atreach" : "总干渠",
+        "gate_type" : "平板钢闸门",
+        "ORIG_FID" : 15
+      },
+      "geometry" : {
+        "x" : 113.91981623842867,
+        "y" : 34.338198657941746,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 17,
+        "OBJECTID" : 17,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : "安墩寺节制闸",
+        "id" : "ZGQ_ADSJZZ",
+        "datumn" : 73.560000000000002,
+        "n" : 5,
+        "width" : 3,
+        "height" : 3,
+        "discharge" : 54.369999999999997,
+        "level" : 75.549999999999997,
+        "top_h" : 0,
+        "atreach" : "总干渠",
+        "gate_type" : "平板钢闸门",
+        "ORIG_FID" : 16
+      },
+      "geometry" : {
+        "x" : 113.92095832256859,
+        "y" : 34.338199400781775,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 18,
+        "OBJECTID" : 18,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 65.522293001400001,
+        "name" : "赵口引黄闸",
+        "id" : "ZGQ_ZKYHZ",
+        "datumn" : 79.700000000000003,
+        "n" : 16,
+        "width" : 2.6000000000000001,
+        "height" : 2.5,
+        "discharge" : 123.09999999999999,
+        "level" : 81.049999999999997,
+        "top_h" : 84.549999999999997,
+        "atreach" : "总干渠",
+        "gate_type" : "平板钢闸门",
+        "ORIG_FID" : 17
+      },
+      "geometry" : {
+        "x" : 113.91814182038877,
+        "y" : 34.338195861050224,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 19,
+        "OBJECTID" : 19,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 35.480203620200001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 18
+      },
+      "geometry" : {
+        "x" : 113.93284299380923,
+        "y" : 34.338434262331418,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 20,
+        "OBJECTID" : 20,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 35.480203613599997,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 19
+      },
+      "geometry" : {
+        "x" : 113.93197657346013,
+        "y" : 34.338453033880455,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 21,
+        "OBJECTID" : 21,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 20
+      },
+      "geometry" : {
+        "x" : 113.92326267882959,
+        "y" : 34.33860319907842,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 22,
+        "OBJECTID" : 22,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 21
+      },
+      "geometry" : {
+        "x" : 113.923620715124,
+        "y" : 34.338603423009602,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 23,
+        "OBJECTID" : 23,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770985000001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 22
+      },
+      "geometry" : {
+        "x" : 113.92455681314652,
+        "y" : 34.338604003072362,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 24,
+        "OBJECTID" : 24,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 23
+      },
+      "geometry" : {
+        "x" : 113.92379043967708,
+        "y" : 34.338604075018111,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 25,
+        "OBJECTID" : 25,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167709943,
+        "name" : "木鱼寺节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 24
+      },
+      "geometry" : {
+        "x" : 113.92252561066846,
+        "y" : 34.338607657017803,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 26,
+        "OBJECTID" : 26,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : "老饭店节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 25
+      },
+      "geometry" : {
+        "x" : 113.92197171462294,
+        "y" : 34.338719474224433,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 27,
+        "OBJECTID" : 27,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : "袁付庄节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 26
+      },
+      "geometry" : {
+        "x" : 113.92060965091468,
+        "y" : 34.33906139646632,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 28,
+        "OBJECTID" : 28,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771024099999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 27
+      },
+      "geometry" : {
+        "x" : 113.93439811138376,
+        "y" : 34.33963763616805,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 29,
+        "OBJECTID" : 29,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771027800001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 28
+      },
+      "geometry" : {
+        "x" : 113.9309462930371,
+        "y" : 34.339746700549824,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 30,
+        "OBJECTID" : 30,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771009199999,
+        "name" : "百亩岗节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 29
+      },
+      "geometry" : {
+        "x" : 113.92060800605475,
+        "y" : 34.339911646105634,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 31,
+        "OBJECTID" : 31,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771003599999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 30
+      },
+      "geometry" : {
+        "x" : 113.93093712354948,
+        "y" : 34.339973563529213,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 32,
+        "OBJECTID" : 32,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 31
+      },
+      "geometry" : {
+        "x" : 113.93439769769566,
+        "y" : 34.340168362979625,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 33,
+        "OBJECTID" : 33,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : "刘元寨节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 32
+      },
+      "geometry" : {
+        "x" : 113.92251559851616,
+        "y" : 34.340156882234396,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 34,
+        "OBJECTID" : 34,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770988699999,
+        "name" : "孙庄节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 33
+      },
+      "geometry" : {
+        "x" : 113.92336655142526,
+        "y" : 34.340158791495071,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 35,
+        "OBJECTID" : 35,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : "张坟节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 34
+      },
+      "geometry" : {
+        "x" : 113.92419105257511,
+        "y" : 34.340159305007944,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 36,
+        "OBJECTID" : 36,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : "余元节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 35
+      },
+      "geometry" : {
+        "x" : 113.92478743169465,
+        "y" : 34.34015967283068,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 37,
+        "OBJECTID" : 37,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710017,
+        "name" : "荆轲节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 36
+      },
+      "geometry" : {
+        "x" : 113.92564130919914,
+        "y" : 34.340160194437487,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 38,
+        "OBJECTID" : 38,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771007300001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 37
+      },
+      "geometry" : {
+        "x" : 113.92618794052112,
+        "y" : 34.340160524488681,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 39,
+        "OBJECTID" : 39,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771003599999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 38
+      },
+      "geometry" : {
+        "x" : 113.93297812144317,
+        "y" : 34.340214006271424,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 40,
+        "OBJECTID" : 40,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710166,
+        "name" : "杨岗节制闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 39
+      },
+      "geometry" : {
+        "x" : 113.92060827764999,
+        "y" : 34.340519461004362,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 41,
+        "OBJECTID" : 41,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770981299999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 40
+      },
+      "geometry" : {
+        "x" : 113.93297591090959,
+        "y" : 34.340548981250549,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 42,
+        "OBJECTID" : 42,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771009199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 41
+      },
+      "geometry" : {
+        "x" : 113.92296155163433,
+        "y" : 34.340580819049592,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 43,
+        "OBJECTID" : 43,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 42
+      },
+      "geometry" : {
+        "x" : 113.92385847249056,
+        "y" : 34.340581379327261,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 44,
+        "OBJECTID" : 44,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 43
+      },
+      "geometry" : {
+        "x" : 113.92486313842312,
+        "y" : 34.340587849949372,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 45,
+        "OBJECTID" : 45,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 44
+      },
+      "geometry" : {
+        "x" : 113.93093657496297,
+        "y" : 34.340642814714158,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 46,
+        "OBJECTID" : 46,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770997999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 45
+      },
+      "geometry" : {
+        "x" : 113.92631060984684,
+        "y" : 34.340644389427098,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 47,
+        "OBJECTID" : 47,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167709999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 46
+      },
+      "geometry" : {
+        "x" : 113.92197872933491,
+        "y" : 34.3407401258562,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 48,
+        "OBJECTID" : 48,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 47
+      },
+      "geometry" : {
+        "x" : 113.9343972408401,
+        "y" : 34.340755877481797,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 49,
+        "OBJECTID" : 49,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 35.480203618099999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 48
+      },
+      "geometry" : {
+        "x" : 113.93298580345208,
+        "y" : 34.340834350524915,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 50,
+        "OBJECTID" : 50,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710204,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 49
+      },
+      "geometry" : {
+        "x" : 113.92197300964676,
+        "y" : 34.340893920717917,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 51,
+        "OBJECTID" : 51,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 50
+      },
+      "geometry" : {
+        "x" : 113.93093633934063,
+        "y" : 34.340929279362797,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 52,
+        "OBJECTID" : 52,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770992400001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 51
+      },
+      "geometry" : {
+        "x" : 113.93297746134078,
+        "y" : 34.341043437504709,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 53,
+        "OBJECTID" : 53,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771009199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 52
+      },
+      "geometry" : {
+        "x" : 113.92264372043144,
+        "y" : 34.341091196901289,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 54,
+        "OBJECTID" : 54,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710204,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 53
+      },
+      "geometry" : {
+        "x" : 113.92197274884336,
+        "y" : 34.341175628852227,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 55,
+        "OBJECTID" : 55,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771024099999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 54
+      },
+      "geometry" : {
+        "x" : 113.9298397743861,
+        "y" : 34.341255807909249,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 56,
+        "OBJECTID" : 56,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : "前杨岗闸",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 55
+      },
+      "geometry" : {
+        "x" : 113.92060575954827,
+        "y" : 34.341261691274099,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 57,
+        "OBJECTID" : 57,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 56
+      },
+      "geometry" : {
+        "x" : 113.92692840002576,
+        "y" : 34.341377911561437,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 58,
+        "OBJECTID" : 58,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770986800001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 57
+      },
+      "geometry" : {
+        "x" : 113.92572667104912,
+        "y" : 34.341379928740764,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 59,
+        "OBJECTID" : 59,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 58
+      },
+      "geometry" : {
+        "x" : 113.93093588428371,
+        "y" : 34.341484778899485,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 60,
+        "OBJECTID" : 60,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167709999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 59
+      },
+      "geometry" : {
+        "x" : 113.93490274346686,
+        "y" : 34.341543654815894,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 61,
+        "OBJECTID" : 61,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 60
+      },
+      "geometry" : {
+        "x" : 113.92237245432534,
+        "y" : 34.341566683755502,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 62,
+        "OBJECTID" : 62,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771009199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 61
+      },
+      "geometry" : {
+        "x" : 113.92197226590736,
+        "y" : 34.341696937963377,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 63,
+        "OBJECTID" : 63,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771012900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 62
+      },
+      "geometry" : {
+        "x" : 113.92712294856528,
+        "y" : 34.341933725860827,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 64,
+        "OBJECTID" : 64,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016770996200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 63
+      },
+      "geometry" : {
+        "x" : 113.93093544451517,
+        "y" : 34.342021116581293,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 65,
+        "OBJECTID" : 65,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771005500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 64
+      },
+      "geometry" : {
+        "x" : 113.93122200539131,
+        "y" : 34.342108786990991,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 66,
+        "OBJECTID" : 66,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771007300001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 65
+      },
+      "geometry" : {
+        "x" : 113.93093540674374,
+        "y" : 34.342190910382271,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 67,
+        "OBJECTID" : 67,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.016771012900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 66
+      },
+      "geometry" : {
+        "x" : 113.93470100394825,
+        "y" : 34.342905100689904,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 68,
+        "OBJECTID" : 68,
+        "type" : "渠道节制闸",
+        "Shape_Leng" : 30.0167710204,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 67
+      },
+      "geometry" : {
+        "x" : 113.92197103743354,
+        "y" : 34.343023144802316,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 69,
+        "OBJECTID" : 69,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.242038210899999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 68
+      },
+      "geometry" : {
+        "x" : 113.93615972409202,
+        "y" : 34.343585907263844,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 70,
+        "OBJECTID" : 70,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.242038233199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 69
+      },
+      "geometry" : {
+        "x" : 113.934642172998,
+        "y" : 34.343590707844953,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 71,
+        "OBJECTID" : 71,
+        "type" : "大型拦河闸",
+        "Shape_Leng" : 58.242038212700002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 70
+      },
+      "geometry" : {
+        "x" : 113.93115825874668,
+        "y" : 34.343599813480637,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 72,
+        "OBJECTID" : 72,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016800010600001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 71
+      },
+      "geometry" : {
+        "x" : 113.93342725546358,
+        "y" : 34.335973723508573,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 73,
+        "OBJECTID" : 73,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016800005,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 72
+      },
+      "geometry" : {
+        "x" : 113.92940563116497,
+        "y" : 34.336238608025383,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 74,
+        "OBJECTID" : 74,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 73
+      },
+      "geometry" : {
+        "x" : 113.93064432407641,
+        "y" : 34.336241600969174,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 75,
+        "OBJECTID" : 75,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016600001600001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 74
+      },
+      "geometry" : {
+        "x" : 113.93344900556724,
+        "y" : 34.337265574446747,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 76,
+        "OBJECTID" : 76,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016800005,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 75
+      },
+      "geometry" : {
+        "x" : 113.92061136322388,
+        "y" : 34.338293587679004,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 77,
+        "OBJECTID" : 77,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 76
+      },
+      "geometry" : {
+        "x" : 113.9220850813615,
+        "y" : 34.338602455339071,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 78,
+        "OBJECTID" : 78,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.017000000900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 77
+      },
+      "geometry" : {
+        "x" : 113.926315111853,
+        "y" : 34.340251956762472,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 79,
+        "OBJECTID" : 79,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 78
+      },
+      "geometry" : {
+        "x" : 113.92197385141219,
+        "y" : 34.340253419959424,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 80,
+        "OBJECTID" : 80,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016600014600002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 79
+      },
+      "geometry" : {
+        "x" : 113.93093513694703,
+        "y" : 34.342396266074843,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 81,
+        "OBJECTID" : 81,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016599999699999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 80
+      },
+      "geometry" : {
+        "x" : 113.93105169987609,
+        "y" : 34.342478141253252,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 82,
+        "OBJECTID" : 82,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016999984200002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 81
+      },
+      "geometry" : {
+        "x" : 113.93449749546312,
+        "y" : 34.342904991871933,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 83,
+        "OBJECTID" : 83,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016599992300002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 82
+      },
+      "geometry" : {
+        "x" : 113.93093426460473,
+        "y" : 34.343459869077719,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 84,
+        "OBJECTID" : 84,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016799990100001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 83
+      },
+      "geometry" : {
+        "x" : 113.9343951328292,
+        "y" : 34.343462208214362,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 85,
+        "OBJECTID" : 85,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 84
+      },
+      "geometry" : {
+        "x" : 113.92983683630098,
+        "y" : 34.34346139432796,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 86,
+        "OBJECTID" : 86,
+        "type" : "渠道分水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 85
+      },
+      "geometry" : {
+        "x" : 113.91966305060942,
+        "y" : 34.338066418930168,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 87,
+        "OBJECTID" : 87,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016600001600001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 86
+      },
+      "geometry" : {
+        "x" : 113.93529791096989,
+        "y" : 34.337266565499647,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 88,
+        "OBJECTID" : 88,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016999997199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 87
+      },
+      "geometry" : {
+        "x" : 113.93323234899378,
+        "y" : 34.337384101495161,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 89,
+        "OBJECTID" : 89,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.300599994100001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 88
+      },
+      "geometry" : {
+        "x" : 113.92044196152733,
+        "y" : 34.337689029225373,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 90,
+        "OBJECTID" : 90,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 89
+      },
+      "geometry" : {
+        "x" : 113.93322064072004,
+        "y" : 34.338428166726544,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 91,
+        "OBJECTID" : 91,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016799990100001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 90
+      },
+      "geometry" : {
+        "x" : 113.92410541463323,
+        "y" : 34.338666880971857,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 92,
+        "OBJECTID" : 92,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016799990100001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 91
+      },
+      "geometry" : {
+        "x" : 113.92240222458304,
+        "y" : 34.339106528943205,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 93,
+        "OBJECTID" : 93,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016600003499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 92
+      },
+      "geometry" : {
+        "x" : 113.93093765684739,
+        "y" : 34.339321888694258,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 94,
+        "OBJECTID" : 94,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016599992300002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 93
+      },
+      "geometry" : {
+        "x" : 113.92281527420562,
+        "y" : 34.339393059242354,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 95,
+        "OBJECTID" : 95,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016999997199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 94
+      },
+      "geometry" : {
+        "x" : 113.92145228509492,
+        "y" : 34.339696078611212,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 96,
+        "OBJECTID" : 96,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016800010600001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 95
+      },
+      "geometry" : {
+        "x" : 113.93297828511982,
+        "y" : 34.340006898699471,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 97,
+        "OBJECTID" : 97,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016599999699999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 96
+      },
+      "geometry" : {
+        "x" : 113.92700089437585,
+        "y" : 34.340194253562004,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 98,
+        "OBJECTID" : 98,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.0165999942,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 97
+      },
+      "geometry" : {
+        "x" : 113.93434090191113,
+        "y" : 34.340312638517503,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 99,
+        "OBJECTID" : 99,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016999997199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 98
+      },
+      "geometry" : {
+        "x" : 113.93226735305598,
+        "y" : 34.340635276596799,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 100,
+        "OBJECTID" : 100,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 99
+      },
+      "geometry" : {
+        "x" : 113.93187600587305,
+        "y" : 34.341079119905487,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 101,
+        "OBJECTID" : 101,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 100
+      },
+      "geometry" : {
+        "x" : 113.92631003787801,
+        "y" : 34.341298159682367,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 102,
+        "OBJECTID" : 102,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016599999699999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 101
+      },
+      "geometry" : {
+        "x" : 113.92712337304533,
+        "y" : 34.341443639412489,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 103,
+        "OBJECTID" : 103,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 102
+      },
+      "geometry" : {
+        "x" : 113.93085197034225,
+        "y" : 34.341631962844872,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 104,
+        "OBJECTID" : 104,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016799988199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 103
+      },
+      "geometry" : {
+        "x" : 113.92200177266375,
+        "y" : 34.342198387345775,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 105,
+        "OBJECTID" : 105,
+        "type" : "渠道退水闸",
+        "Shape_Leng" : 30.016799993799999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 104
+      },
+      "geometry" : {
+        "x" : 113.92197364906474,
+        "y" : 34.343456015482786,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 106,
+        "OBJECTID" : 106,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 105
+      },
+      "geometry" : {
+        "x" : 113.93430932671413,
+        "y" : 34.334530626387334,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 107,
+        "OBJECTID" : 107,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600009099999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 106
+      },
+      "geometry" : {
+        "x" : 113.93540728291987,
+        "y" : 34.334761418504684,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 108,
+        "OBJECTID" : 108,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800006899999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 107
+      },
+      "geometry" : {
+        "x" : 113.93539024796166,
+        "y" : 34.335108421016855,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 109,
+        "OBJECTID" : 109,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 108
+      },
+      "geometry" : {
+        "x" : 113.93557642920894,
+        "y" : 34.335712624238283,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 110,
+        "OBJECTID" : 110,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600003499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 109
+      },
+      "geometry" : {
+        "x" : 113.93166309947253,
+        "y" : 34.336217158295256,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 111,
+        "OBJECTID" : 111,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 110
+      },
+      "geometry" : {
+        "x" : 113.93332806743638,
+        "y" : 34.336219018992608,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 112,
+        "OBJECTID" : 112,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800003099998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 111
+      },
+      "geometry" : {
+        "x" : 113.93539561961222,
+        "y" : 34.336222979606873,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 113,
+        "OBJECTID" : 113,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800005,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 112
+      },
+      "geometry" : {
+        "x" : 113.93041365426677,
+        "y" : 34.336224424817431,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 114,
+        "OBJECTID" : 114,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 113
+      },
+      "geometry" : {
+        "x" : 113.93598426276355,
+        "y" : 34.336248469091629,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 115,
+        "OBJECTID" : 115,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800005,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 114
+      },
+      "geometry" : {
+        "x" : 113.92562144497379,
+        "y" : 34.336251460236724,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 116,
+        "OBJECTID" : 116,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600003499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 115
+      },
+      "geometry" : {
+        "x" : 113.92468905755402,
+        "y" : 34.336311069100589,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 117,
+        "OBJECTID" : 117,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599999699999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 116
+      },
+      "geometry" : {
+        "x" : 113.92975871849012,
+        "y" : 34.336430671738185,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 118,
+        "OBJECTID" : 118,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599992300002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 117
+      },
+      "geometry" : {
+        "x" : 113.93345177637843,
+        "y" : 34.336512748364669,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 119,
+        "OBJECTID" : 119,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799990100001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 118
+      },
+      "geometry" : {
+        "x" : 113.92789023304783,
+        "y" : 34.336604708540506,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 120,
+        "OBJECTID" : 120,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 119
+      },
+      "geometry" : {
+        "x" : 113.93539714486246,
+        "y" : 34.336663838965023,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 121,
+        "OBJECTID" : 121,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 120
+      },
+      "geometry" : {
+        "x" : 113.92815070549068,
+        "y" : 34.336668503748513,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 122,
+        "OBJECTID" : 122,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 121
+      },
+      "geometry" : {
+        "x" : 113.93166097887115,
+        "y" : 34.336682239993422,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 123,
+        "OBJECTID" : 123,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 122
+      },
+      "geometry" : {
+        "x" : 113.92680479810303,
+        "y" : 34.336680145472371,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 124,
+        "OBJECTID" : 124,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600005299999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 123
+      },
+      "geometry" : {
+        "x" : 113.93093642477629,
+        "y" : 34.336782141182937,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 125,
+        "OBJECTID" : 125,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 124
+      },
+      "geometry" : {
+        "x" : 113.9263119633265,
+        "y" : 34.336829334905929,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 126,
+        "OBJECTID" : 126,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.017000019600001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 125
+      },
+      "geometry" : {
+        "x" : 113.92562085232055,
+        "y" : 34.33692315937634,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 127,
+        "OBJECTID" : 127,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999993500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 126
+      },
+      "geometry" : {
+        "x" : 113.934307399467,
+        "y" : 34.337064434775868,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 128,
+        "OBJECTID" : 128,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599988599999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 127
+      },
+      "geometry" : {
+        "x" : 113.93468224678827,
+        "y" : 34.337085480710414,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 129,
+        "OBJECTID" : 129,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999997199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 128
+      },
+      "geometry" : {
+        "x" : 113.93332900453004,
+        "y" : 34.337086836888091,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 130,
+        "OBJECTID" : 130,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.017000014000001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 129
+      },
+      "geometry" : {
+        "x" : 113.9268044392735,
+        "y" : 34.337093559320351,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 131,
+        "OBJECTID" : 131,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799988199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 130
+      },
+      "geometry" : {
+        "x" : 113.93251482489927,
+        "y" : 34.337154865204923,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 132,
+        "OBJECTID" : 132,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 131
+      },
+      "geometry" : {
+        "x" : 113.93206999683298,
+        "y" : 34.337155328355777,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 133,
+        "OBJECTID" : 133,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999845,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 132
+      },
+      "geometry" : {
+        "x" : 113.93166057597489,
+        "y" : 34.337178538059163,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 134,
+        "OBJECTID" : 134,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 133
+      },
+      "geometry" : {
+        "x" : 113.92792160319948,
+        "y" : 34.337193519865082,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 135,
+        "OBJECTID" : 135,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999995300001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 134
+      },
+      "geometry" : {
+        "x" : 113.92680412720881,
+        "y" : 34.337452510225205,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 136,
+        "OBJECTID" : 136,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999995300001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 135
+      },
+      "geometry" : {
+        "x" : 113.92581486756217,
+        "y" : 34.33747572262655,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 137,
+        "OBJECTID" : 137,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600003499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 136
+      },
+      "geometry" : {
+        "x" : 113.92631133290172,
+        "y" : 34.337549953567532,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 138,
+        "OBJECTID" : 138,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 137
+      },
+      "geometry" : {
+        "x" : 113.92680388798908,
+        "y" : 34.337728636267627,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 139,
+        "OBJECTID" : 139,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0170000102,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 138
+      },
+      "geometry" : {
+        "x" : 113.93165995724132,
+        "y" : 34.337942047187767,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 140,
+        "OBJECTID" : 140,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999997199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 139
+      },
+      "geometry" : {
+        "x" : 113.92761817823634,
+        "y" : 34.338224093467204,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 141,
+        "OBJECTID" : 141,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 140
+      },
+      "geometry" : {
+        "x" : 113.92818977473837,
+        "y" : 34.338224429813636,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 142,
+        "OBJECTID" : 142,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600003499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 141
+      },
+      "geometry" : {
+        "x" : 113.92705123212875,
+        "y" : 34.338310366330404,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 143,
+        "OBJECTID" : 143,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.017000000900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 142
+      },
+      "geometry" : {
+        "x" : 113.93166043837857,
+        "y" : 34.338318039346063,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 144,
+        "OBJECTID" : 144,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599999699999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 143
+      },
+      "geometry" : {
+        "x" : 113.93251466931656,
+        "y" : 34.338330907745274,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 145,
+        "OBJECTID" : 145,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600009099999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 144
+      },
+      "geometry" : {
+        "x" : 113.92631126545257,
+        "y" : 34.338748061873616,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 146,
+        "OBJECTID" : 146,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999985999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 145
+      },
+      "geometry" : {
+        "x" : 113.92653256252777,
+        "y" : 34.338841869256896,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 147,
+        "OBJECTID" : 147,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016999985999998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 146
+      },
+      "geometry" : {
+        "x" : 113.9269774346609,
+        "y" : 34.338842135456218,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 148,
+        "OBJECTID" : 148,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.017000000900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 147
+      },
+      "geometry" : {
+        "x" : 113.92796964228523,
+        "y" : 34.338990460641298,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 149,
+        "OBJECTID" : 149,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 148
+      },
+      "geometry" : {
+        "x" : 113.92310580019262,
+        "y" : 34.33906681218366,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 150,
+        "OBJECTID" : 150,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 149
+      },
+      "geometry" : {
+        "x" : 113.9329790054768,
+        "y" : 34.339101365036015,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 151,
+        "OBJECTID" : 151,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0166000109,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 150
+      },
+      "geometry" : {
+        "x" : 113.92735100494497,
+        "y" : 34.339105294174033,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 152,
+        "OBJECTID" : 152,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 151
+      },
+      "geometry" : {
+        "x" : 113.9298420685567,
+        "y" : 34.339309887241541,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 153,
+        "OBJECTID" : 153,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599997899998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 152
+      },
+      "geometry" : {
+        "x" : 113.9314071874918,
+        "y" : 34.339312087882604,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 154,
+        "OBJECTID" : 154,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 153
+      },
+      "geometry" : {
+        "x" : 113.9290113557895,
+        "y" : 34.339318212265709,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 155,
+        "OBJECTID" : 155,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800005,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 154
+      },
+      "geometry" : {
+        "x" : 113.92468558976816,
+        "y" : 34.339349219091218,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 156,
+        "OBJECTID" : 156,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799988199999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 155
+      },
+      "geometry" : {
+        "x" : 113.92804670788928,
+        "y" : 34.339604702095357,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 157,
+        "OBJECTID" : 157,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600001600001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 156
+      },
+      "geometry" : {
+        "x" : 113.92757620058126,
+        "y" : 34.339628511646538,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 158,
+        "OBJECTID" : 158,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016600003499999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 157
+      },
+      "geometry" : {
+        "x" : 113.92704991192397,
+        "y" : 34.339869557833879,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 159,
+        "OBJECTID" : 159,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.017000000900001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 158
+      },
+      "geometry" : {
+        "x" : 113.92796920251669,
+        "y" : 34.339871907762358,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 160,
+        "OBJECTID" : 160,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599992300002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 159
+      },
+      "geometry" : {
+        "x" : 113.92735562656094,
+        "y" : 34.339873462690207,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 161,
+        "OBJECTID" : 161,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599992300002,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 160
+      },
+      "geometry" : {
+        "x" : 113.92984131942137,
+        "y" : 34.340209782155796,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 162,
+        "OBJECTID" : 162,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0166000109,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 161
+      },
+      "geometry" : {
+        "x" : 113.92910279076125,
+        "y" : 34.340316973249742,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 163,
+        "OBJECTID" : 163,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0166000109,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 162
+      },
+      "geometry" : {
+        "x" : 113.93187653557368,
+        "y" : 34.340424187726114,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 164,
+        "OBJECTID" : 164,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.0167999994,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 163
+      },
+      "geometry" : {
+        "x" : 113.9298408958407,
+        "y" : 34.340718228263654,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 165,
+        "OBJECTID" : 165,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 164
+      },
+      "geometry" : {
+        "x" : 113.92494530857914,
+        "y" : 34.340860074732689,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 166,
+        "OBJECTID" : 166,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800006899999,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 165
+      },
+      "geometry" : {
+        "x" : 113.92708644238542,
+        "y" : 34.340866096593118,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 167,
+        "OBJECTID" : 167,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799995700001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 166
+      },
+      "geometry" : {
+        "x" : 113.9322571988107,
+        "y" : 34.3411874621317,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 168,
+        "OBJECTID" : 168,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799997500001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 167
+      },
+      "geometry" : {
+        "x" : 113.92777183190458,
+        "y" : 34.341467648613161,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 169,
+        "OBJECTID" : 169,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016799990100001,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 168
+      },
+      "geometry" : {
+        "x" : 113.92477738087155,
+        "y" : 34.342104136596674,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 170,
+        "OBJECTID" : 170,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016599997899998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 169
+      },
+      "geometry" : {
+        "x" : 113.92787640237418,
+        "y" : 34.342109171900802,
+        "z" : 0,
+        "m" : null
+      }
+    },
+    {
+      "attributes" : {
+        "OBJECTID_1" : 171,
+        "OBJECTID" : 171,
+        "type" : "河沟水闸",
+        "Shape_Leng" : 30.016800001299998,
+        "name" : " ",
+        "id" : " ",
+        "datumn" : 0,
+        "n" : 0,
+        "width" : 0,
+        "height" : 0,
+        "discharge" : 0,
+        "level" : 0,
+        "top_h" : 0,
+        "atreach" : " ",
+        "gate_type" : " ",
+        "ORIG_FID" : 170
+      },
+      "geometry" : {
+        "x" : 113.93561943658779,
+        "y" : 34.34234294347209,
+        "z" : 0,
+        "m" : null
+      }
+    }
+  ]
+}
