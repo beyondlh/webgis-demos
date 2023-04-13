@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiled ArcGIS MapServer</title>
+    <!-- Pointer events polyfill for old browsers, see https://caniuse.com/#feat=pointer -->
+    <script src="https://unpkg.com/elm-pep"></script>
+    <style>
+        .map {
+            width: 100%;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+<div id="map" class="map"></div>
+<script>
+    import 'ol/ol.css';
+    import Map from 'ol/Map';
+    import TileLayer from 'ol/layer/Tile';
+    import View from 'ol/View';
+    import {TileArcGISRest} from 'ol/source';
+
+    var url ='https://gis.ysy.com.cn/server/rest/services/BASEMAP/DEM_light/MapServer?token=e8Y8EMfcDU3u5ZtVUCK4VrXbc7yS9sJ8wRkwmAnL6FihqLzN8YeSbh6VCVzBkiPhZ0KiumdMPZjx0Dm3FNnZN-n-8ovqlyIy3-thm4GN8Gl_iaYBEkfC3HO3jz6cjrIE';
+
+    var layers = [
+        new TileLayer({
+            extent: [12220768.914102579, 3796325.8706263618, 12948024.506109007, 4243052.842168125],
+            source: new TileArcGISRest({
+                url: url,
+            }),
+        }) ];
+    var map = new Map({
+        layers: layers,
+        target: 'map',
+        view: new View({
+            center: [12646126.50755121, 3949706.658843967],
+            zoom: 8,
+        }),
+    });
+</script>
+</body>
+</html>
